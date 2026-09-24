@@ -1,0 +1,120 @@
+:root{
+    --sys:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --accent:#FF5B3A;
+    --glass:rgba(18,18,22,.62);
+    --glass-line:rgba(255,255,255,.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    font-family:var(--sys);
+    color:#fff;
+    min-height:100dvh;
+    -webkit-font-smoothing:antialiased;
+    background:#0b0b0d;
+    position:relative;
+    overflow-x:hidden;
+  }
+  .bg{
+    position:fixed;inset:0;z-index:0;
+    background:
+      url("https://paymegpt.com/objects/quick-uploads/7/9cae244acd5883dd.jpg") center/cover no-repeat,
+      radial-gradient(130% 75% at 50% -12%, rgba(255,91,58,.34), transparent 58%),
+      radial-gradient(95% 60% at 88% 108%, rgba(232,140,60,.16), transparent 55%),
+      linear-gradient(180deg,#1B1310 0%,#120D0B 55%,#0A0707 100%);
+  }
+  .bg::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.18) 26%,rgba(0,0,0,.30) 60%,rgba(0,0,0,.66) 100%);
+  }
+  .screen{
+    position:relative;z-index:1;isolation:isolate;
+    max-width:430px;margin:0 auto;
+    min-height:100dvh;
+    display:flex;flex-direction:column;
+    padding:18px 20px calc(20px + env(safe-area-inset-bottom));
+  }
+  .screen>*{position:relative;z-index:1}
+  .lock{display:flex;justify-content:center;margin-top:6px;opacity:.92}
+  .lock svg{filter:drop-shadow(0 1px 6px rgba(0,0,0,.5))}
+  .clock{text-align:center;margin-top:18px;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+  .date{font-size:20px;font-weight:600;letter-spacing:.2px;opacity:.96}
+  .time{font-size:78px;font-weight:600;line-height:1;letter-spacing:-1px;margin-top:2px;font-variant-numeric:tabular-nums}
+  .who{text-align:center;margin-top:26px;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+  .who .name{font-size:17px;font-weight:600}
+  .who .role{font-size:13px;font-weight:500;opacity:.78;margin-top:1px}
+  .wordmark{margin-top:9px;text-align:center;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+  .wordmark .l1{font-size:34px;line-height:.88}
+  .wordmark .l2{font-size:30px;line-height:.95;margin-top:-1px}
+  .wordmark .r{font-size:1.55em;font-style:italic;color:var(--accent);display:inline-block;vertical-align:-.13em;line-height:0}
+  .stack{margin-top:26px;display:flex;flex-direction:column;gap:11px;flex:1}
+  .note{
+    display:flex;align-items:center;gap:14px;
+    background:var(--glass);
+    -webkit-backdrop-filter:blur(22px) saturate(150%);
+    backdrop-filter:blur(22px) saturate(150%);
+    border:.5px solid var(--glass-line);
+    border-radius:20px;padding:13px 15px;
+    box-shadow:0 6px 22px rgba(0,0,0,.28);
+    transition:transform .18s ease, background .18s ease;
+    text-decoration:none;color:#fff;
+  }
+  .note:active{transform:scale(.975)}
+  @media(hover:hover){.note:hover{transform:translateY(-2px);background:rgba(40,40,46,.5)}}
+  .tile{
+    width:46px;height:46px;border-radius:13px;flex-shrink:0;
+    display:grid;place-items:center;color:#fff;
+    box-shadow:inset 0 1px 1px rgba(255,255,255,.25),0 2px 6px rgba(0,0,0,.3);
+  }
+  .t-bot{background:linear-gradient(160deg,#FF7A4D,#FF3D2E)}
+  .t-yt{background:linear-gradient(160deg,#FF5A5A,#E01616)}
+  .t-site{background:linear-gradient(160deg,#34D1A2,#0FA47A)}
+  .t-shop{background:linear-gradient(160deg,#FFB13D,#F08200)}
+  .t-call{background:linear-gradient(160deg,#5AA7FF,#1E6FE6)}
+  .note .body{flex:1;min-width:0}
+  .note .ttl{display:block;font-size:15.5px;font-weight:600;line-height:1.2}
+  .note .sub{display:block;font-size:12.5px;opacity:.72;margin-top:2px}
+  .note .chev{opacity:.55;flex-shrink:0}
+  .note.feat{background:rgba(120,40,24,.55);border-color:rgba(255,140,110,.55)}
+  @media(hover:hover){.note.feat:hover{background:rgba(150,52,32,.6)}}
+  .dock{display:flex;justify-content:center;gap:64px;margin-top:24px}
+  .dockbtn{
+    width:58px;height:58px;border-radius:50%;
+    display:grid;place-items:center;
+    background:rgba(40,40,46,.5);
+    -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    border:.5px solid var(--glass-line);
+    box-shadow:0 4px 16px rgba(0,0,0,.3);
+    transition:transform .18s ease,background .18s ease;
+  }
+  .dockbtn:active{transform:scale(.92)}
+  @media(hover:hover){.dockbtn:hover{background:rgba(60,60,68,.6)}}
+  .dock .lbl{display:block;text-align:center;font-size:11px;font-weight:500;opacity:.8;margin-top:7px;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+  .dockwrap{display:flex;flex-direction:column;align-items:center}
+  .foot{text-align:center;margin-top:18px}
+  .hint{font-size:12px;opacity:.62;letter-spacing:.2px;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+  .foot a{color:#fff;opacity:.85;text-decoration:none}
+  .pill{width:138px;height:5px;border-radius:3px;background:rgba(255,255,255,.85);margin:16px auto 4px}
+  .rv{opacity:0;transform:translateY(12px);animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .a1{animation-delay:.05s}.a2{animation-delay:.12s}.a3{animation-delay:.2s}
+  .a4{animation-delay:.28s}.a5{animation-delay:.36s}.a6{animation-delay:.44s}
+  .a7{animation-delay:.52s}.a8{animation-delay:.6s}.a9{animation-delay:.68s}.a10{animation-delay:.76s}
+  @media (prefers-reduced-motion:reduce){.rv{animation:none;opacity:1;transform:none}}
+  @media(min-width:700px){
+    .bg{filter:blur(34px) brightness(.55) saturate(1.05);transform:scale(1.12)}
+    .screen{
+      max-width:410px;margin:34px auto;min-height:calc(100dvh - 68px);
+      border-radius:42px;overflow:hidden;
+      background:
+        url("https://paymegpt.com/objects/quick-uploads/7/9cae244acd5883dd.jpg") top center/cover no-repeat,
+        radial-gradient(130% 70% at 50% -10%, rgba(255,91,58,.36), transparent 58%),
+        linear-gradient(180deg,#1B1310 0%,#120D0B 55%,#0A0707 100%);
+      box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 10px #1a1a1f,0 0 0 12px rgba(255,255,255,.08);
+      padding:22px 22px 26px;
+    }
+    .screen::before{
+      content:"";position:absolute;inset:0;z-index:0;border-radius:42px;pointer-events:none;
+      background:linear-gradient(180deg,rgba(0,0,0,.46) 0%,rgba(0,0,0,.2) 26%,rgba(0,0,0,.32) 60%,rgba(0,0,0,.68) 100%);
+    }
+  }
