@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/</loc>
+    <lastmod>2026-09-29T16:46:05.202Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/build-club/</loc>
-    <lastmod>2026-09-29T16:45:27.156Z</lastmod>
+    <lastmod>2026-09-29T16:45:33.445Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -13,11 +18,6 @@
   <url>
     <loc>https://smartrautomation.ca/page/</loc>
     <lastmod>2026-09-29T16:41:54.217Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/</loc>
-    <lastmod>2026-09-29T16:40:57.203Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
