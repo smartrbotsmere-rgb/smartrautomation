@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+
+<!-- SEO Meta Tags -->
+<title>Smartr Build Club — Stop watching AI tutorials. Start building AI tools.</title>
+<meta name="description" content="A monthly done-with-you membership — Mere builds a real AI tool live, you build your own version right alongside her. Walk out with something working, in your own account, every month. $97/month." />
+<meta property="og:title" content="Smartr Build Club — Stop watching AI tutorials. Start building AI tools." />
+<meta property="og:description" content="A monthly done-with-you membership — Mere builds a real AI tool live, you build your own version right alongside her. Walk out with something working, in your own account, every month. $97/month." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Smartr Build Club — Stop watching AI tutorials. Start building AI tools." />
+<meta name="twitter:description" content="A monthly done-with-you membership — Mere builds a real AI tool live, you build your own version right alongside her. Walk out with something working, in your own account, every month. $97/month." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mt9hq6n5-g5rmn";
+  var SITEK="";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  function siteTok(){try{return SITEK?localStorage.getItem(SITEK):null;}catch(e){return null;}}
+  var u=new URL(location.href);var found=null;var changed=false;
+  var PINP=true;
+  if(!PINP){try{localStorage.removeItem('lp_pin_'+slug);if(SITEK)localStorage.removeItem(SITEK);}catch(e){}}
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{if(PINP||p!=='pin_access_token'){localStorage.setItem(map[p]+slug,v);if(SITEK&&p==='pin_access_token')localStorage.setItem(SITEK,v);}}catch(e){}if(p==='pin_access_token'){try{sessionStorage.setItem('lp_fresh_'+slug,'1');}catch(e){}}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=6435');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='TGaxjUQ';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='TGaxjUQ';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav><div class="wrap"><div class="word">Smart<em>'R'</em>Bots <span>Build Club</span></div><div class="navlinks"><a href="#proof">What you get</a><a href="#how">How it works</a><a href="#forwho">Is this you</a><a href="#offer" class="nav-cta">Join — $97/mo</a></div></div></nav>
+<section class="hero"><div class="wrap" style="display:contents;">
+<div data-aos="fade-up" data-aos-duration="700"><div class="kicker">Monthly · Live · Done-WITH-you</div>
+<h1>You didn't spend 20+ years<br>building real skills<br>just to start from<br><span class="hl">scratch on someone else's idea.</span></h1>
+<p class="hero-sub">You know things. Decades of things. What actually works, what customers actually want, what always goes wrong. That's not nothing — that's the raw material for a real online business, and most of it's just sitting there unused. Build Club is where you turn what you already know into something small, real, and yours — a couple of hours a month, no code, no jargon, no chasing whatever's trending this week.</p>
+<div class="hero-ctas"><a href="#offer" class="btn-primary">Join Build Club →</a><a href="#proof" class="btn-ghost">See a kit in action</a></div>
+<p class="hero-note">Not your bro. Not a shortcut to "passive income." Built on land you own, not rented LLM ground.</p>
+<p class="hero-note" style="margin-top:6px;">The promise: you leave every session with something you could actually hand to a business — not a notebook full of "ideas."</p></div>
+<div class="mock" id="hero-mock" data-aos="fade-left" data-aos-delay="150" data-aos-duration="700"><div class="mock-title">A few things we've built together</div><div class="stages">
+<div class="build-item"><span class="build-emoji">🧠</span><div><b>Second Brain</b><span>Your own AI that remembers your whole business, so you stop re-explaining it every morning</span></div></div>
+<div class="build-item"><span class="build-emoji">🐕</span><div><b>Dog Sitter Kit</b><span>Booking, vaccination reminders, rebooking nudges — fully automated</span></div></div>
+<div class="build-item"><span class="build-emoji">🔧</span><div><b>Contractor CRM</b><span>Job booked → confirmed → dispatched → invoiced → reviewed, zero manual texting</span></div></div>
+<div class="build-item"><span class="build-emoji">🎉</span><div><b>Party Booking + Wallet Pass</b><span>Event intake and a digital pass that fires reminders automatically</span></div></div>
+</div></div></div></section>
+<section class="not-box"><div class="wrap"><div class="not-card" data-aos="fade-up">
+<div class="kicker">What this is not</div>
+<ul class="not-list">
+<li>Not another "AI thought leadership" club for people who love talking and hate shipping.</li>
+<li>Not a bro-heavy tool dump where nobody explains anything unless you already know the jargon.</li>
+<li>Not pretty screenshots. Not vibes. Actual working automations you could offer a business.</li>
+</ul>
+</div></div></section>
+<section class="pain"><div class="wrap"><h2 data-aos="fade-up">You're not behind. You just weren't handed the map.</h2>
+<div class="pain-list">
+<div class="pain-item" data-aos="fade-up" data-aos-delay="0">Every "start an online business" pitch is aimed at 25-year-olds with no mortgage and no track record — like starting over is the only way in. It's not. You've already done the hard part: you know your industry, your people, what problems are real and which ones are made up by ad copy.</div>
+<div class="pain-item" data-aos="fade-up" data-aos-delay="60">Everyone's chasing the flashy AI demo stuff for Twitter. You're not — you've spent too long building things that actually work to start faking it now. Businesses don't pay for flashy — they pay for boring, done well: faster replies, no missed calls, invoices that send themselves.</div>
+<div class="pain-item" data-aos="fade-up" data-aos-delay="120">You already know small businesses need this — booking, follow-ups, invoicing — but every tutorial buries the 10 real steps under an hour of jargon.</div>
+<div class="pain-item" data-aos="fade-up" data-aos-delay="180">You're done feeling behind on AI. You don't need a life hack — you need a couple of hours a month where someone builds something real with you, for your actual life, not a hypothetical "AI strategy."</div>
+<div class="pain-item" data-aos="fade-up" data-aos-delay="240">Every "community" you've tried either assumes you already speak the jargon, or is a room of people watching one guy build along to his own screen. You leave with notes, not something you could offer anyone.</div>
+</div></div></section>
+<section class="pull"><div class="wrap" style="display:contents;"><blockquote data-aos="zoom-in" data-aos-duration="700">"I saw a guy doing this in New York and thought — my people deserve better than a folder. His members walk out with a Claude project that lives on their computer. Mine walk out with something that's <span>actually ON THE INTERNET doing a job</span> — taking payments, booking appointments, sending texts."<cite>— the difference, in one line</cite></blockquote></div></section>
+<section class="proof" id="proof"><div class="wrap">
+<div class="proof-head" data-aos="fade-up"><div class="kicker">What actually gets built</div><h2>Business automations. Personal mini-apps. Whatever's actually useful.</h2><p>Some sessions it's the boring stuff businesses pay for — automations that save time, save money, or stop mistakes. Other sessions it's a mini-app just for you, or whatever a member wants to learn to build that month. You don't need to understand how any of it works underneath — you need to build it once, watch it run, and realize you could do this again.</p></div>
+<div class="kit-row"><div class="kit-copy" data-aos="fade-right"><h3>Take a Contractor CRM as an example of what that looks like.</h3><p>A job comes in, gets confirmed, a reminder fires automatically, the invoice sends itself, and a follow-up request goes out once it's paid — zero manual texting. Build something like that alongside Mere, swap "contractor" for your own first small business, and walk out with the exact kind of system a plumbing, salon, or contracting business would pay someone to set up. Every build comes with a ready-made template, so you're customizing a working start — not building from a blank screen or learning everything from zero.</p><div class="kit-tags"><span>Booking confirmed</span><span>Auto reminders</span><span>Instant invoicing</span><span>Auto follow-up</span></div></div>
+<div class="mock" id="proof-mock" style="transform:rotate(-1deg);"><div class="mock-title">Coming up in Build Club</div><div class="stages">
+<div class="build-item"><span class="build-emoji">📈</span><div><b>Lead Feed Dashboard</b><span>A CRM that catches every lead the moment they hit your form, no more digging through email or DMs to find who's ready to buy</span></div></div>
+<div class="build-item"><span class="build-emoji">☎️</span><div><b>AI Receptionist</b><span>Answers calls, handles the common questions, texts you a summary so nothing falls through the cracks</span></div></div>
+<div class="build-item"><span class="build-emoji">🎉</span><div><b>Event Booking + Wallet Pass</b><span>Booking and a digital pass that fires reminders automatically, built for wine tastings, craft parties, and more</span></div></div>
+<div class="build-item"><span class="build-emoji">🎟️</span><div><b>Coupon Book</b><span>One purchase unlocks a bundle of separate deals across several small businesses, each redeemed in-store</span></div></div>
+<div class="build-item"><span class="build-emoji">✨</span><div><b>+ a new one every session</b><span>Business builds, personal mini-apps, whatever the room needs</span></div></div>
+</div></div></div></div></section>
+<section class="how" id="how"><div class="wrap">
+<div class="how-head" data-aos="fade-up"><div class="kicker">How it works</div><h2>Three steps. No coding required.</h2><p>Everything runs on your own platform account — you're never dropped into a tool you don't own.</p></div>
+<div class="how-steps">
+<div class="step" data-aos="fade-up" data-aos-delay="0"><div class="step-num">01</div><h4>You join.</h4><p>Get into the membership and community — one link gets you both. No setup required to start watching.</p></div>
+<div class="step" data-aos="fade-up" data-aos-delay="120"><div class="step-num">02</div><h4>We build it, live — together.</h4><p>Two real build sessions a month, times rotate so it's not always the same day at the same hour shutting people out. Mere builds on screen and you build your own version in real time, right alongside her. Plus a couple of live Q&As a month to work through what's stuck, and questions answered any time in between — you're never sitting there alone wondering what to try next.</p></div>
+<div class="step" data-aos="fade-up" data-aos-delay="240"><div class="step-num">03</div><h4>You walk out with something you built.</h4><p>Not a recording to catch up on later — a working system in your own account, built from a ready-made template so you're not starting from a blank screen. That means more time understanding how to customize it for your own business, less time learning everything from the ground up. You built it, so you can explain it, tweak it, and sell it. Come back monthly for the next one, plus AMAs and surprise builds in between.</p></div>
+</div></div></section>
+<section class="forwho" id="forwho"><div class="wrap"><h2 data-aos="fade-right">This is for you if —</h2><div>
+<div class="forwho-item" data-aos="fade-up" data-aos-delay="0">This isn't for tech people. It's for the woman who keeps hearing she "should be doing something with AI" and quietly suspects it's not for people like her. It is — you just have to watch first.</div>
+<div class="forwho-item" data-aos="fade-up" data-aos-delay="40">You've built up real expertise over years — in a business, a trade, a skill — and you're done watching other people package that kind of knowledge into products while yours sits unused.</div>
+<div class="forwho-item" data-aos="fade-up" data-aos-delay="80">You're not interested in chasing the next shiny opportunity. You want one thing that works, built around what you already know.</div>
+<div class="forwho-item" data-aos="fade-up" data-aos-delay="160">You've said <b>"I could probably build that for someone"</b> about something you saw online, more than once.</div>
+<div class="forwho-item" data-aos="fade-up" data-aos-delay="240">You want <b>direct access</b> to someone actually doing this, not a forum you post into and wait.</div>
+<img class="forwho-photo" data-aos="fade-up" data-aos-delay="300" src="https://paymegpt.com/objects/generated-images/7/1787715445933-0c1fefc8b5ec7a87.png" alt="Mere teaching live on screen during a Build Club session">
+</div></div></section>
+<section class="offer" id="offer"><div class="wrap"><div class="offer-card" id="offer-card">
+<div class="offer-left"><h2>Everything, every month.</h2><ul class="offer-list">
+<li><b>Two build sessions a month, live</b> — not a recording to catch up on, a working system in your own account by the end of the hour.</li>
+<li><b>A couple of live Q&As every month</b> — bring what's stuck, get it unstuck.</li>
+<li><b>Every build comes with a ready-made template</b> — you're customizing a working start, not building from a blank screen or learning everything from zero.</li>
+<li><b>Questions answered anytime</b> — a real person, not a bot, not a forum where you wait.</li>
+<li><b>Your own Smartr Automation account, included</b> — a $97 value on its own. You're not paying extra for the AI. This price covers all of it: the platform, the community, and me.</li>
+<li><b>You get more than you paid for</b> — surprise builds whenever there's extra time.</li>
+<li><b>You're never behind</b> — miss a session? It lives in the membership site, ready whenever you are.</li>
+</ul></div>
+<div class="offer-right"><p class="price">$97<span>/month</span></p><p class="price-note">Cancel anytime</p><a href="#" class="btn-block" id="checkout-btn">Join Build Club</a><p class="checkout-note">Checkout link coming soon — this button is a placeholder until Stripe is wired in.</p></div>
+<div class="offer-bottom">
+<div class="offer-bottom-label">Your account also includes</div>
+<div class="account-grid">
+<div>Your own AI agents/chatbots</div>
+<div>Flows &amp; automations</div>
+<div>Landing pages</div>
+<div>Contact &amp; pipeline CRM</div>
+<div>SMS, email &amp; social broadcast</div>
+<div>Connects to Claude, ChatGPT, Grok</div>
+<div>Wallet passes &amp; loyalty cards</div>
+<div>AI image, video &amp; voice tools</div>
+<div>Isolated, private workspace</div>
+</div>
+<div class="offer-reassurance">
+<span>⚡ Everything unlocked, no upsells</span>
+<span>🚀 Live account, no setup wait</span>
+<span>🔒 Cancel anytime, no contracts</span>
+</div>
+</div>
+</div></div></section>
+<footer><div class="wrap"><div class="foot-word">Smart<em>'R'</em>Bots</div><p>Smartr Build Club · smartrautomation.space/buildclub · © 2026</p></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
