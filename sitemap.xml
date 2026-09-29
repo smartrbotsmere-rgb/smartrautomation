@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://smartrbotsmere-rgb.github.io/smartrautomation/page/</loc>
-    <lastmod>2026-09-24T03:52:15.883Z</lastmod>
+    <loc>https://smartrautomation.ca/smartrbots/</loc>
+    <lastmod>2026-09-29T16:38:38.506Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://smartrbotsmere-rgb.github.io/smartrautomation/</loc>
-    <lastmod>2026-09-24T03:51:40.135Z</lastmod>
+    <loc>https://smartrautomation.ca/</loc>
+    <lastmod>2026-09-28T04:04:05.840Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/page/</loc>
+    <lastmod>2026-09-28T03:01:12.888Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
