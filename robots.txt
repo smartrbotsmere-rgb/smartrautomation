@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://smartrbotsmere-rgb.github.io/smartrautomation/sitemap.xml
+Sitemap: https://smartrautomation.ca/sitemap.xml
