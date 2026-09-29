@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/revival-renovations/</loc>
+    <lastmod>2026-09-29T16:46:36.393Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/page/</loc>
     <lastmod>2026-09-29T16:46:30.461Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -18,11 +23,6 @@
   <url>
     <loc>https://smartrautomation.ca/</loc>
     <lastmod>2026-09-29T16:46:05.202Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/revival-renovations/</loc>
-    <lastmod>2026-09-29T16:43:02.157Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
