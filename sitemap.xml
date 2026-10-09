@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://smartrautomation.ca/smartrbots/</loc>
-    <lastmod>2026-09-29T16:46:44.872Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/revival-renovations/</loc>
-    <lastmod>2026-09-29T16:46:36.393Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://smartrautomation.ca/page/</loc>
-    <lastmod>2026-09-29T16:46:30.461Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/build-club/</loc>
-    <lastmod>2026-09-29T16:46:25.101Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/apps/</loc>
-    <lastmod>2026-09-29T16:46:14.327Z</lastmod>
+    <lastmod>2026-10-09T03:12:11.486Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://smartrautomation.ca/</loc>
-    <lastmod>2026-09-29T16:46:05.202Z</lastmod>
+    <lastmod>2026-10-09T03:09:36.863Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/apps/</loc>
+    <lastmod>2026-10-09T03:05:45.898Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/smartrbots/</loc>
+    <lastmod>2026-10-09T02:31:17.710Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/revival-renovations/</loc>
+    <lastmod>2026-10-08T16:13:16.578Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/build-club/</loc>
+    <lastmod>2026-10-08T16:10:38.119Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
