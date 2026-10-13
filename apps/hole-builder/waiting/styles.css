@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#05081a;--surface:#080d28;--border:#0f1a4a;--accent:#4d7fff;--blue-bright:#1a5cff;--text:#dde6ff;--muted:#4a5a8a;}
+html,body{min-height:100%;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif}
+nav{border-bottom:1px solid var(--border);background:rgba(5,8,26,.97);padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--accent)}
+.nav-logo::before{content:'● '}
+.wrap{max-width:480px;margin:0 auto;padding:80px 24px;text-align:center}
+.icon{font-size:52px;margin-bottom:24px}
+h1{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#fff;margin-bottom:12px;line-height:1.2}
+.sub{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:28px;max-width:360px;margin-left:auto;margin-right:auto}
+.email-box{background:var(--surface);border:1px solid rgba(26,92,255,.3);border-radius:12px;padding:16px 20px;margin-bottom:32px;font-size:14px;color:var(--muted)}
+.email-box span{color:var(--accent);font-weight:500}
+.info-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:32px;text-align:left}
+.info-card p{font-size:13px;color:var(--muted);line-height:1.7}
+.info-card p strong{color:var(--text);display:block;margin-bottom:4px}
+.btn{display:inline-block;padding:13px 28px;border-radius:10px;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;cursor:pointer;border:none;background:var(--blue-bright);color:#fff;text-decoration:none;letter-spacing:.04em;transition:all .2s}
+.btn:hover{background:#2d6dff}
+.footer-note{font-size:11px;color:var(--muted);margin-top:20px}
