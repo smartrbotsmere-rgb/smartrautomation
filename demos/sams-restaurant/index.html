@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  
+
+  <script>
+    // ===== TAILWIND CONFIG =====
+    // Extend default config with brand colors
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#B8312F',
+            cream: '#FAF7F2',
+            charcoal: '#2A2A2A',
+          }
+        }
+      }
+    }
+  </script>
+
+<!-- SEO Meta Tags -->
+<title>Sam's Restaurant &amp; Broasted Chicken | Ridgetown, Ontario</title>
+<meta name="description" content="Home-style cooking in Ridgetown, Ontario. Broasted chicken, all-day breakfast, homestyle burgers, and hearty dinners. Open Wednesday–Monday 7AM–8PM. Call 519-674-1003." />
+<meta property="og:title" content="Sam's Restaurant &amp; Broasted Chicken | Ridgetown, Ontario" />
+<meta property="og:description" content="Home-style cooking in Ridgetown, Ontario. Broasted chicken, all-day breakfast, homestyle burgers, and hearty dinners. Open Wednesday–Monday 7AM–8PM. Call 519-674-1003." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Sam's Restaurant &amp; Broasted Chicken | Ridgetown, Ontario" />
+<meta name="twitter:description" content="Home-style cooking in Ridgetown, Ontario. Broasted chicken, all-day breakfast, homestyle burgers, and hearty dinners. Open Wednesday–Monday 7AM–8PM. Call 519-674-1003." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mob4uo94-oehrk";
+  var SITEK="";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  function siteTok(){try{return SITEK?localStorage.getItem(SITEK):null;}catch(e){return null;}}
+  var u=new URL(location.href);var found=null;var changed=false;
+  var PINP=true;
+  if(!PINP){try{localStorage.removeItem('lp_pin_'+slug);if(SITEK)localStorage.removeItem(SITEK);}catch(e){}}
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{if(PINP||p!=='pin_access_token'){localStorage.setItem(map[p]+slug,v);if(SITEK&&p==='pin_access_token')localStorage.setItem(SITEK,v);}}catch(e){}if(p==='pin_access_token'){try{sessionStorage.setItem('lp_fresh_'+slug,'1');}catch(e){}}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-gate>
+(function(){
+  var slug='lp-mob4uo94-oehrk';var apiBase='https://paymegpt.com';var currency='USD';var presets=[2500,5000,10000,25000];var minAmt=100;var maxAmt=1000000;var thankYouMsg='Thank you for your generous donation!';
+  var successSubtext='Your donation has been processed successfully.';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function getLang(){var l=(document.documentElement.lang||navigator.language||'en').toLowerCase();return l.split('-')[0];}
+  function getLocale(){return (document.documentElement.lang||navigator.language||'en');}
+  var I18N={en:{min:'Minimum is ',max:'Maximum is ',emailPrompt:'Enter your email for the receipt:',emailRequired:'An email address is required to complete checkout.',failed:'Failed to process donation'},fr:{min:'Le minimum est ',max:'Le maximum est ',emailPrompt:'Entrez votre adresse e-mail pour le reçu :',emailRequired:'Une adresse e-mail est requise pour finaliser le paiement.',failed:'Échec du traitement du don'},es:{min:'El mínimo es ',max:'El máximo es ',emailPrompt:'Introduce tu correo electrónico para el recibo:',emailRequired:'Se requiere una dirección de correo electrónico para completar el pago.',failed:'No se pudo procesar la donación'},pt:{min:'O mínimo é ',max:'O máximo é ',emailPrompt:'Insira seu e-mail para o recibo:',emailRequired:'Um endereço de e-mail é necessário para concluir o pagamento.',failed:'Falha ao processar a doação'},de:{min:'Mindestbetrag ist ',max:'Höchstbetrag ist ',emailPrompt:'Geben Sie Ihre E-Mail-Adresse für die Quittung ein:',emailRequired:'Eine E-Mail-Adresse ist erforderlich, um den Checkout abzuschließen.',failed:'Spende konnte nicht verarbeitet werden'},it:{min:'Il minimo è ',max:'Il massimo è ',emailPrompt:'Inserisci la tua email per la ricevuta:',emailRequired:"È richiesto un indirizzo email per completare il pagamento.",failed:'Impossibile elaborare la donazione'}};
+  function t(k){var L=getLang();return (I18N[L]&&I18N[L][k])||I18N.en[k];}
+  function fmtD(c){try{return new Intl.NumberFormat(getLocale(),{style:'currency',currency:currency}).format(c/100);}catch(e){return new Intl.NumberFormat('en-US',{style:'currency',currency:currency}).format(c/100);}}
+  function findDonEmail(){var ids=['email','emailAddress','buyer-email','buyerEmail','donor-email','donorEmail','user-email','userEmail','contact-email'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.indexOf('@')>-1)return el.value.trim();}var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.indexOf('@')>-1)return inputs[j].value.trim();}return '';}
+  function findDonName(){var ids=['name','fullName','full-name','donor-name','donorName','customer-name','user-name'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"])');for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}return '';}
+  function findDonPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  window.__processDonation=function(a,b,c,d){
+    var amountCents,email='',donorName='',donorMessage='',productName='',productDescription='',quantity=1;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents||(a.amount?Math.round(Number(a.amount)*100):0);
+      email=a.email||'';
+      productName=a.productName||a.label||'';
+      productDescription=a.productDescription||a.description||'';
+      donorName=a.name||a.donorName||'';
+      donorMessage=a.message||a.donorMessage||'';
+      quantity=a.quantity&&parseInt(a.quantity,10)>0?parseInt(a.quantity,10):1;
+    }else{
+      amountCents=typeof a==='number'?a:(parseInt(a,10)||0);
+      var rest=[b,c,d];var nonEmail=[];
+      for(var i=0;i<rest.length;i++){var v=rest[i];if(typeof v==='string'&&v){if(!email&&v.indexOf('@')>-1&&/^[^s@]+@[^s@]+.[^s@]+$/.test(v.trim())){email=v.trim();}else{nonEmail.push(v);}}}
+      donorName=nonEmail[0]||'';donorMessage=nonEmail[1]||'';
+    }
+    if(!email)email=findDonEmail();
+    if(!donorName)donorName=findDonName();
+    var donorPhone=findDonPhone();
+    if(!amountCents||amountCents<minAmt){alert(t('min')+fmtD(minAmt));return Promise.reject('below_min');}
+    if(amountCents>maxAmt){alert(t('max')+fmtD(maxAmt));return Promise.reject('above_max');}
+    if(!email){var p=window.prompt(t('emailPrompt'),'');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert(t('emailRequired'));return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/donation/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:donorName||'',phone:donorPhone||'',amountCents:amountCents,message:donorMessage||'',productName:productName||'',productDescription:productDescription||'',quantity:quantity,locale:getLocale(),successUrl:successBase+'?donation=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?donation=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||t('failed'));throw new Error(d.error);}
+    });
+  };
+  window.__donationConfig={currency:currency,presets:presets.map(function(c){return c/100;}),minAmount:minAmt/100,maxAmount:maxAmt/100,formatAmount:fmtD};
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('donation')==='success'){
+      var sidD=urlParams.get('session_id');
+      if(sidD){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidD})}).catch(function(){});}catch(e){}}
+      var overlay=document.createElement('div');overlay.id='donation-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">'+esc(thankYouMsg)+'</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(successSubtext)+'</p><button id="lp-don-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var dBtn=document.getElementById('lp-don-success-btn');
+      if(dBtn){dBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=3420');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='etZ53VuFJ';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='etZ53VuFJ';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="texture-bg">
+
+  <!-- ============================================================================ -->
+  <!-- HERO SECTION                                                                 -->
+  <!-- Full-width background image with dark overlay. Restaurant name as large     -->
+  <!-- serif headline. Tagline below. Two equally prominent CTA buttons.           -->
+  <!-- Mobile: stacked layout with safe padding. Desktop: centered wide layout.    -->
+  <!-- ============================================================================ -->
+  <section
+    data-section="hero"
+    class="hero-min-h relative flex flex-col items-center justify-center text-white px-4 py-16 md:px-8"
+    style="
+      background-image: url('https://paymegpt.com/objects/generated-images/7/1776920449369-89c3457e4eb5a78e.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    "
+    aria-label="Hero section"
+  >
+    <!-- Dark overlay for text legibility -->
+    <div class="hero-overlay absolute inset-0" aria-hidden="true"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 text-center max-w-3xl mx-auto px-4">
+
+      <!-- Restaurant Name -->
+      <h1 class="font-serif-display text-shadow-strong text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-4">
+        Sam's Restaurant<br class="hidden sm:block" />
+        <span class="block sm:inline"> &amp; Broasted Chicken</span>
+      </h1>
+
+      <!-- Tagline -->
+      <p class="text-shadow-strong text-xl sm:text-2xl md:text-3xl font-light tracking-wide mb-10 opacity-95" style="font-family: 'Source Sans 3', sans-serif;">
+        Home-style cooking in Ridgetown
+      </p>
+
+      <!-- CTA Buttons — equal prominence, side by side -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <!-- Primary: View Menu & Order Online -->
+        <a
+          href="https://paymegpt.com/shop/sams-ridgetown"
+          class="btn-solid inline-block rounded-md px-7 py-4 text-lg w-full sm:w-auto text-center"
+          aria-label="View Menu and Order Online"
+        >
+          View Menu &amp; Order Online
+        </a>
+        <!-- Secondary: Call Us — tap-to-call -->
+        <a
+          href="tel:5196741003"
+          class="btn-outline inline-block rounded-md px-7 py-4 text-lg w-full sm:w-auto text-center"
+          aria-label="Call Sam's Restaurant at 519-674-1003"
+        >
+          📞 Call 519-674-1003
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 opacity-60" aria-hidden="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ============================================================================ -->
+  <!-- HOURS & LOCATION SECTION                                                    -->
+  <!-- Two-column layout: Hours on left, Find Us on right.                        -->
+  <!-- Phone number is large and tap-to-call on mobile. Facebook link included.   -->
+  <!-- ============================================================================ -->
+  <section
+    data-section="hours-location"
+    class="warm-section py-14 md:py-20 px-4 md:px-8"
+    aria-label="Hours and Location"
+  >
+    <div class="max-w-4xl mx-auto">
+
+      <!-- Section label -->
+      <div class="text-center mb-10">
+        <div class="divider-red mb-4"></div>
+        <p class="text-sm uppercase tracking-widest text-primary font-semibold">Come Visit Us</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+
+        <!-- Left: Hours -->
+        <div>
+          <h2 class="section-heading text-3xl font-black mb-6 text-charcoal">
+            Hours
+          </h2>
+          <div class="space-y-0">
+            <div class="hours-row">
+              <span class="font-semibold text-charcoal">Wednesday – Monday</span>
+              <span class="text-primary font-bold">7:00 AM – 8:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="font-semibold text-charcoal">Tuesday</span>
+              <span class="text-gray-500 font-semibold italic">Closed</span>
+            </div>
+          </div>
+          <p class="mt-5 text-sm text-gray-500">
+            Breakfast served daily. Daily Breakfast Special until 11 AM.
+          </p>
+        </div>
+
+        <!-- Right: Find Us -->
+        <div>
+          <h2 class="section-heading text-3xl font-black mb-6 text-charcoal">
+            Find Us
+          </h2>
+
+          <!-- Large tap-to-call phone number -->
+          <a
+            href="tel:5196741003"
+            class="block text-4xl md:text-3xl lg:text-4xl font-black text-primary hover:opacity-80 transition-opacity mb-3"
+            aria-label="Call 519-674-1003"
+            style="font-family: 'Playfair Display', serif;"
+          >
+            519-674-1003
+          </a>
+
+          <!-- Location -->
+          <p class="text-lg font-semibold text-charcoal mb-6">
+            Ridgetown, Ontario
+          </p>
+
+          <!-- Facebook Link -->
+          <a
+            href="https://facebook.com/samsrestaurantridgetown"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="fb-icon"
+            aria-label="Sam's Restaurant on Facebook"
+          >
+            <!-- Facebook SVG Icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#B8312F" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+            </svg>
+            Find us on Facebook
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================================ -->
+  <!-- WHAT WE'RE KNOWN FOR SECTION                                                -->
+  <!-- 4-card grid with circular images, bold titles, short descriptions.          -->
+  <!-- Cards are clean and unpretentious — no fancy animations, just clear info.  -->
+  <!-- ============================================================================ -->
+  <section
+    data-section="known-for"
+    class="texture-bg py-14 md:py-20 px-4 md:px-8"
+    aria-label="What We're Known For"
+  >
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Section Heading -->
+      <div class="text-center mb-12">
+        <h2 class="section-heading font-serif-display text-4xl md:text-5xl font-black text-charcoal mb-4">
+          What We're Known For
+        </h2>
+        <div class="divider-red mt-4"></div>
+      </div>
+
+      <!-- 4-Card Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Card 1: Broasted Chicken -->
+        <article class="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="card-img-wrap mb-5">
+            <img
+              src="https://paymegpt.com/objects/generated-images/7/1776920449369-89c3457e4eb5a78e.png"
+              alt="Broasted Chicken — golden, crispy, and juicy"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-serif-display text-xl font-bold text-charcoal mb-2">Broasted Chicken</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Our signature. Golden, crispy, and juicy. Served with coleslaw and your choice of fries or mashed potato.
+          </p>
+        </article>
+
+        <!-- Card 2: All-Day Breakfast -->
+        <article class="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="card-img-wrap mb-5">
+            <img
+              src="https://paymegpt.com/objects/generated-images/7/1776920475763-e65888ad2af87ebf.png"
+              alt="All-Day Breakfast — eggs, peameal, pancakes, skillets"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-serif-display text-xl font-bold text-charcoal mb-2">All-Day Breakfast</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Eggs, peameal, pancakes, skillets — breakfast whenever you want it. Daily Breakfast Special until 11 AM.
+          </p>
+        </article>
+
+        <!-- Card 3: Homestyle Burgers -->
+        <article class="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="card-img-wrap mb-5">
+            <img
+              src="https://paymegpt.com/objects/generated-images/7/1776920501345-d508278e6de9053c.png"
+              alt="Homestyle Burgers — fresh all-beef patties"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-serif-display text-xl font-bold text-charcoal mb-2">Homestyle Burgers</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            All-beef 5.33oz patties made fresh. From the classic Hamburger to Sam's Ultimate with two patties and onion rings on top.
+          </p>
+        </article>
+
+        <!-- Card 4: Hearty Entrees -->
+        <article class="bg-white rounded-xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div class="card-img-wrap mb-5">
+            <img
+              src="https://paymegpt.com/objects/generated-images/7/1776920530412-9841750893a8ceb8.png"
+              alt="Hearty Entrees — roast beef, liver and onions, fish and chips"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-serif-display text-xl font-bold text-charcoal mb-2">Hearty Entrees</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Roast beef, liver 'n onions, chopped steak, souvlaki, fish 'n chips. Real dinners with mashed potatoes and veg.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================================ -->
+  <!-- MENU CALLOUT STRIP                                                          -->
+  <!-- Full-width deep red background strip. Centered headline and single CTA.    -->
+  <!-- High-contrast, impossible to miss. Drives traffic to online menu.          -->
+  <!-- ============================================================================ -->
+  <section
+    data-section="menu-strip"
+    class="bg-primary py-14 md:py-16 px-4 md:px-8 text-center"
+    aria-label="Menu callout"
+  >
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-serif-display text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+        Over 100 homestyle favourites<br class="hidden sm:block" /> on the menu
+      </h2>
+      <p class="text-red-200 text-lg mb-8">
+        Breakfast, burgers, chicken, entrees, sandwiches, and more. Something for everyone.
+      </p>
+      <a
+        href="https://paymegpt.com/shop/sams-ridgetown"
+        class="btn-outline inline-block rounded-md px-8 py-4 text-xl btn-pulse"
+        aria-label="Browse the full menu"
+      >
+        Browse the Full Menu
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ============================================================================ -->
+  <!-- SPECIAL MENUS SECTION                                                       -->
+  <!-- Two-column layout: Seniors Menu (left) and Kids Menu (right).              -->
+  <!-- Warm background with left-border accent cards.                             -->
+  <!-- ============================================================================ -->
+  <section
+    data-section="special-menus"
+    class="warm-section py-14 md:py-20 px-4 md:px-8"
+    aria-label="Special Menus"
+  >
+    <div class="max-w-4xl mx-auto">
+
+      <!-- Section Heading -->
+      <div class="text-center mb-12">
+        <h2 class="section-heading font-serif-display text-4xl md:text-5xl font-black text-charcoal mb-4">
+          Special Menus
+        </h2>
+        <div class="divider-red mt-4"></div>
+        <p class="text-gray-500 mt-4 text-base">
+          Because a good meal should be for everyone.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Seniors Menu -->
+        <div class="special-card rounded-xl p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <!-- Icon -->
+            <span class="text-3xl" aria-hidden="true">☕</span>
+            <h3 class="font-serif-display text-2xl font-bold text-charcoal">Seniors Menu</h3>
+          </div>
+          <p class="text-sm font-semibold text-primary uppercase tracking-wide mb-3">For guests 60 and above</p>
+          <p class="text-gray-700 leading-relaxed">
+            Special pricing for guests 60 and above. Entrees from <strong>$10.95</strong>, served with fries or mashed, vegetables, garlic toast, and rice pudding or jello.
+          </p>
+        </div>
+
+        <!-- Kids Menu -->
+        <div class="special-card rounded-xl p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <!-- Icon -->
+            <span class="text-3xl" aria-hidden="true">🍟</span>
+            <h3 class="font-serif-display text-2xl font-bold text-charcoal">Kids Menu</h3>
+          </div>
+          <p class="text-sm font-semibold text-primary uppercase tracking-wide mb-3">Kids up to age 12</p>
+          <p class="text-gray-700 leading-relaxed">
+            <strong>$9.95</strong> with purchase of an adult entree. Includes a small drink and dessert. Kids eat well too.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================================ -->
+  <!-- FINAL CTA SECTION                                                           -->
+  <!-- Centered "Hungry?" heading with both CTA buttons repeated.                 -->
+  <!-- Clear, direct, no fluff.                                                   -->
+  <!-- ============================================================================ -->
+  <section
+    data-section="cta"
+    class="texture-bg py-16 md:py-20 px-4 md:px-8 text-center"
+    aria-label="Call to action"
+  >
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-serif-display text-5xl md:text-6xl font-black text-charcoal mb-3">
+        Hungry?
+      </h2>
+      <p class="text-gray-500 text-lg mb-10">
+        Check out the menu and order online, or give us a call.
+      </p>
+
+      <!-- Two equal CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a
+          href="https://paymegpt.com/shop/sams-ridgetown"
+          class="btn-solid inline-block rounded-md px-7 py-4 text-lg w-full sm:w-auto text-center"
+          aria-label="View Menu and Order Online"
+        >
+          View Menu &amp; Order
+        </a>
+        <a
+          href="tel:5196741003"
+          class="btn-outline-red inline-block rounded-md px-7 py-4 text-lg w-full sm:w-auto text-center"
+          aria-label="Call Sam's Restaurant at 519-674-1003"
+        >
+          📞 Call 519-674-1003
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================================ -->
+  <!-- FOOTER                                                                      -->
+  <!-- Compact dark footer with restaurant info, hours, phone, Facebook, copyright -->
+  <!-- ============================================================================ -->
+  <footer
+    data-section="footer"
+    class="bg-charcoal text-gray-300 py-10 px-4 md:px-8"
+    aria-label="Footer"
+    style="background-color: #1E1E1E;"
+  >
+    <div class="max-w-4xl mx-auto">
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
+
+        <!-- Restaurant Name & Location -->
+        <div>
+          <h3 class="font-serif-display text-white text-xl font-bold mb-2">
+            Sam's Restaurant<br />&amp; Broasted Chicken
+          </h3>
+          <p class="text-gray-400 text-sm">Ridgetown, Ontario</p>
+        </div>
+
+        <!-- Hours -->
+        <div>
+          <h4 class="text-white font-semibold mb-2 uppercase tracking-wide text-xs">Hours</h4>
+          <p class="text-sm text-gray-400">Wed – Mon: 7:00 AM – 8:00 PM</p>
+          <p class="text-sm text-gray-400">Tuesday: Closed</p>
+        </div>
+
+        <!-- Contact & Social -->
+        <div>
+          <h4 class="text-white font-semibold mb-2 uppercase tracking-wide text-xs">Contact</h4>
+          <a
+            href="tel:5196741003"
+            class="block text-primary font-bold text-lg hover:opacity-80 transition-opacity mb-2"
+            aria-label="Call 519-674-1003"
+          >
+            519-674-1003
+          </a>
+          <a
+            href="https://facebook.com/samsrestaurantridgetown"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-gray-400 hover:text-primary transition-colors text-sm"
+            aria-label="Sam's Restaurant on Facebook"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+            </svg>
+            Facebook
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-gray-700 pt-6 text-center">
+        <p class="text-gray-500 text-xs">
+          © Sam's Restaurant &amp; Broasted Chicken · Ridgetown, Ontario
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
