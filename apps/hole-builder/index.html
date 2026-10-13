@@ -304,7 +304,7 @@
 <body>
 <nav data-section="navbar">
   <div class="nav-inner">
-    <div class="nav-logo">PMGPT</div>
+    <div class="nav-logo">Smart 'R' Automation</div>
     <div class="nav-tag">HOLE BUILDER</div>
   </div>
 </nav>
@@ -399,7 +399,7 @@
 
 <footer data-section="footer">
   <div class="footer-inner">
-    <div class="footer-logo">● PMGPT</div>
+    <div class="footer-logo">● Smart 'R' Automation</div>
     <div class="footer-note">Feature → outcome. Every. Single. Time.</div>
   </div>
 </footer>
@@ -407,7 +407,7 @@
 <script>
 var cur=0,sf=0,total=5;
 var WEBHOOK='https://paymegpt.com/api/webhooks/flow/3168/b48ed57059dd0b6832b5d9234ea1512d9bbfe8fbc689e852b22b76e40d0609c6';
-var RESULTS='https://paymegpt.com/p/mWMtHb';
+var RESULTS='https://smartrautomation.ca/apps/hole-builder/waiting/';
 var frameNames=['Pain First','Vision First','Number Drop','Question Hook'];
 
 function rp(){
@@ -458,12 +458,11 @@ function generate(){
     }
   };
 
-  // Fire webhook
-  fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){});
-
-  // Redirect immediately with the SAME pitchId
+  // Redirect with the SAME pitchId once the webhook has been sent (max 2.5s wait)
   var url=RESULTS+'?pid='+encodeURIComponent(pitchId)+'&name='+encodeURIComponent(name)+'&email='+encodeURIComponent(email);
-  window.location.href=url;
+  var gone=false;function go(){if(gone)return;gone=true;window.location.href=url;}
+  setTimeout(go,2500);
+  fetch(WEBHOOK,{method:'POST',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){}).then(go);
 }
 rp();
 </script>
