@@ -1,33 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://smartrautomation.ca/apps/hole-builder/results/</loc>
-    <lastmod>2026-10-13T22:07:40.315Z</lastmod>
+    <loc>https://smartrautomation.ca/</loc>
+    <lastmod>2026-10-13T22:17:49.703Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://smartrautomation.ca/apps/hole-builder/waiting/</loc>
-    <lastmod>2026-10-13T22:07:33.031Z</lastmod>
+    <loc>https://smartrautomation.ca/demos/</loc>
+    <lastmod>2026-10-13T22:17:42.943Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/apps/</loc>
+    <lastmod>2026-10-13T22:17:19.273Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/apps/ad-factory/</loc>
+    <lastmod>2026-10-13T22:16:05.374Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/apps/social-post-generator/</loc>
+    <lastmod>2026-10-13T22:14:22.821Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://smartrautomation.ca/apps/hole-builder/</loc>
-    <lastmod>2026-10-13T22:07:25.491Z</lastmod>
+    <lastmod>2026-10-13T22:13:43.328Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/apps/hole-builder/results/</loc>
+    <lastmod>2026-10-13T22:11:38.680Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/apps/hole-builder/waiting/</loc>
+    <lastmod>2026-10-13T22:11:18.315Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://smartrautomation.ca/demos/sams-restaurant/</loc>
     <lastmod>2026-10-13T22:07:17.206Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/apps/social-post-generator/</loc>
-    <lastmod>2026-10-13T22:07:07.573Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/apps/ad-factory/</loc>
-    <lastmod>2026-10-13T22:06:58.062Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -46,23 +61,8 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://smartrautomation.ca/demos/</loc>
-    <lastmod>2026-10-13T21:19:48.662Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://smartrautomation.ca/build-club/</loc>
     <lastmod>2026-10-13T21:19:39.622Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/apps/</loc>
-    <lastmod>2026-10-13T21:19:28.040Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/</loc>
-    <lastmod>2026-10-13T21:19:19.721Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
