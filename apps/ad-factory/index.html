@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
 
 
 <!-- SEO Meta Tags -->
@@ -514,7 +514,7 @@
 
   <footer style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 2rem;border-top:2px solid var(--ink);padding:1.1rem 1.5rem">
     <span class="mono-label">&#8224; Ecommerce Ad Factory</span>
-    <span class="mono-label">Built on PayMeGPT &middot; set in Bricolage Grotesque</span>
+    <span class="mono-label">Built by Smart 'R' Automation &middot; set in Bricolage Grotesque</span>
   </footer>
 
 </div>
@@ -604,7 +604,7 @@ document.getElementById('btnParse').addEventListener('click', async () => {
     sBtn.disabled = true; sBtn.textContent = 'Imported from previous results';
     unlockNextStages();
     resultEl.className = 'parse-result success visible';
-    resultEl.textContent = '\u2713 Imported \u2014 brand profile for "' + brandData.brand_name + '" loaded. Carousel and video are unlocked below.';
+    resultEl.textContent = '✓ Imported — brand profile for "' + brandData.brand_name + '" loaded. Carousel and video are unlocked below.';
     document.getElementById('returningBanner').classList.remove('open');
     setTimeout(() => document.getElementById('stage-carousel').scrollIntoView({ behavior: 'smooth', block: 'start' }), 400);
   } catch (err) {
@@ -653,8 +653,8 @@ function unlockNextStages() {
     const pill = stage.querySelector('.stage-pill');
     pill.textContent = 'Ready'; pill.classList.remove('is-locked');
     document.getElementById('pre-brand-' + format).textContent = brandData.brand_name;
-    document.getElementById('pre-platform-' + format).textContent = brandData.target_platform || '\u2014';
-    document.getElementById('pre-angle-' + format).textContent = brandData.ad_angle || '\u2014';
+    document.getElementById('pre-platform-' + format).textContent = brandData.target_platform || '—';
+    document.getElementById('pre-angle-' + format).textContent = brandData.ad_angle || '—';
     document.getElementById('pre-email-' + format).textContent = brandData.contact_email;
   });
 }
@@ -668,12 +668,12 @@ async function runFlow(format) {
   try {
     const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
     if (!res.ok) throw new Error('HTTP ' + res.status);
-    setStatus(format, 'success', 'Presses running \u2733', 'Now building ' + label + ' for ' + brandData.brand_name + '. Results arrive at ' + brandData.contact_email + ' in a few minutes \u2014 videos can take a little longer.');
+    setStatus(format, 'success', 'Presses running ✳', 'Now building ' + label + ' for ' + brandData.brand_name + '. Results arrive at ' + brandData.contact_email + ' in a few minutes — videos can take a little longer.');
     const stage = document.getElementById('stage-' + format);
     stage.classList.remove('unlocked','active'); stage.classList.add('completed');
     const pill = stage.querySelector('.stage-pill');
     pill.textContent = 'Started'; pill.classList.add('is-done');
-    btn.textContent = 'Started \u2014 check your email soon'; btn.disabled = false;
+    btn.textContent = 'Started — check your email soon'; btn.disabled = false;
   } catch(e) {
     setStatus(format, 'error-state', 'Something went wrong', 'The factory could not be started. Please try again.');
     btn.textContent = 'Try again'; btn.disabled = false;
@@ -688,13 +688,13 @@ document.getElementById('btn-static').addEventListener('click', async () => {
   try {
     const res = await fetch(WEBHOOKS.static, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contactEmail: brandData.contact_email, contactName: brandData.brand_name, data: { ...brandData } }) });
     if (!res.ok) throw new Error('HTTP ' + res.status);
-    setStatus('static', 'success', 'Presses running \u2733', 'Now browsing your site and building your brand profile, 5 ad copy variations, and 3 ad images for ' + brandData.brand_name + '. Results arrive at ' + brandData.contact_email + ' in a few minutes. Carousel and video are unlocked below.');
+    setStatus('static', 'success', 'Presses running ✳', 'Now browsing your site and building your brand profile, 5 ad copy variations, and 3 ad images for ' + brandData.brand_name + '. Results arrive at ' + brandData.contact_email + ' in a few minutes. Carousel and video are unlocked below.');
     const stage1 = document.getElementById('stage-static');
     stage1.classList.remove('active'); stage1.classList.add('completed');
     const pill = stage1.querySelector('.stage-pill');
     pill.textContent = 'Started'; pill.classList.add('is-done');
     ['brandName','email','brandUrl','platform','adAngle'].forEach(id => { document.getElementById(id).disabled = true; });
-    btn.textContent = 'Started \u2014 check your email soon'; btn.disabled = false;
+    btn.textContent = 'Started — check your email soon'; btn.disabled = false;
     unlockNextStages();
     setTimeout(() => document.getElementById('stage-carousel').scrollIntoView({ behavior: 'smooth', block: 'start' }), 600);
   } catch(e) {
