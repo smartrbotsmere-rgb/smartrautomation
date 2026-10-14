@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/apps/hole-builder/</loc>
+    <lastmod>2026-10-14T01:19:04.231Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/apps/ad-factory/</loc>
     <lastmod>2026-10-14T01:18:56.865Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -63,11 +68,6 @@
   <url>
     <loc>https://smartrautomation.ca/apps/hole-builder/results/</loc>
     <lastmod>2026-10-14T00:52:00.588Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/apps/hole-builder/</loc>
-    <lastmod>2026-10-14T00:51:53.479Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
