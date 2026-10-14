@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/demos/</loc>
+    <lastmod>2026-10-14T02:05:30.216Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/build-club/</loc>
     <lastmod>2026-10-14T02:05:23.435Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -68,11 +73,6 @@
   <url>
     <loc>https://smartrautomation.ca/demos/sams-restaurant/</loc>
     <lastmod>2026-10-14T01:57:08.608Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/demos/</loc>
-    <lastmod>2026-10-14T01:57:02.122Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
