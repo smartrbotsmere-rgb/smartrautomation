@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/bookmere/</loc>
+    <lastmod>2026-10-14T01:19:39.538Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/apps/social-post-generator/</loc>
     <lastmod>2026-10-14T01:19:31.418Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -43,11 +48,6 @@
   <url>
     <loc>https://smartrautomation.ca/roi/loyalty-card/</loc>
     <lastmod>2026-10-14T01:18:33.007Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/bookmere/</loc>
-    <lastmod>2026-10-14T01:16:35.047Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
