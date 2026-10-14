@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/smartrbots/</loc>
+    <lastmod>2026-10-14T00:53:04.401Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/roi/loyalty-card/</loc>
     <lastmod>2026-10-14T00:52:56.139Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -58,11 +63,6 @@
   <url>
     <loc>https://smartrautomation.ca/</loc>
     <lastmod>2026-10-14T00:51:34.883Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/smartrbots/</loc>
-    <lastmod>2026-10-13T22:19:24.294Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
