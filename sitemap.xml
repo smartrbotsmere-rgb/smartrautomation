@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/roi/loyalty-card/</loc>
+    <lastmod>2026-10-14T01:20:13.554Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/demos/sams-restaurant/</loc>
     <lastmod>2026-10-14T01:20:07.205Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -58,11 +63,6 @@
   <url>
     <loc>https://smartrautomation.ca/</loc>
     <lastmod>2026-10-14T01:18:40.252Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/roi/loyalty-card/</loc>
-    <lastmod>2026-10-14T01:18:33.007Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
