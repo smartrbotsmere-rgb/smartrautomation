@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/apps/mole-mart-mania/</loc>
+    <lastmod>2026-10-14T01:56:32.673Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/apps/hole-builder/waiting/</loc>
     <lastmod>2026-10-14T01:56:25.854Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -68,11 +73,6 @@
   <url>
     <loc>https://smartrautomation.ca/apps/social-post-generator/</loc>
     <lastmod>2026-10-14T01:19:31.418Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/apps/mole-mart-mania/</loc>
-    <lastmod>2026-10-14T01:19:24.096Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
