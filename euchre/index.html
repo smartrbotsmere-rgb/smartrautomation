@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<!-- SEO Meta Tags -->
+<title>Euchre Practice — Canadian Rules</title>
+<meta property="og:title" content="Euchre Practice — Canadian Rules" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Euchre Practice — Canadian Rules" />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-muonfvhr-dctjw";
+  var SITEK="";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  function siteTok(){try{return SITEK?localStorage.getItem(SITEK):null;}catch(e){return null;}}
+  var u=new URL(location.href);var found=null;var changed=false;
+  var PINP=true;
+  if(!PINP){try{localStorage.removeItem('lp_pin_'+slug);if(SITEK)localStorage.removeItem(SITEK);}catch(e){}}
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{if(PINP||p!=='pin_access_token'){localStorage.setItem(map[p]+slug,v);if(SITEK&&p==='pin_access_token')localStorage.setItem(SITEK,v);}}catch(e){}if(p==='pin_access_token'){try{sessionStorage.setItem('lp_fresh_'+slug,'1');}catch(e){}}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=7623');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='fiCMJjPL';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='fiCMJjPL';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">🃏 Euchre Practice<small>Canadian rules · first to 10</small></div>
+    <div class="scores">
+      <div class="sc"><b id="us">0</b><span>Us</span></div>
+      <div class="sc"><b id="them">0</b><span>Them</span></div>
+    </div>
+  </div>
+  <div class="info">
+    <div>Trump <span id="trump"></span></div>
+    <div>Called by <b id="mk">—</b></div>
+    <div>Tricks us–them <b id="tk">0 – 0</b></div>
+  </div>
+
+  <div class="table">
+    <div class="seat top" id="seat2"><div class="sname">Partner</div><div class="badges"></div><div class="backs"></div></div>
+    <div class="seat" id="seat1"><div class="sname">West</div><div class="badges"></div><div class="backs"></div></div>
+    <div class="trick" id="trick"></div>
+    <div class="seat" id="seat3"><div class="sname">East</div><div class="badges"></div><div class="backs"></div></div>
+  </div>
+
+  <div class="seat" id="seat0"><div class="sname">You</div><div class="badges"></div></div>
+  <div class="hand" id="hand"></div>
+
+  <div class="panel">
+    <div class="msg" id="msg"></div>
+    <div class="sub" id="sub"></div>
+    <div class="hintmsg" id="hintMsg"></div>
+    <div class="btns" id="btns"></div>
+  </div>
+
+  <div class="tools">
+    <button class="btn alt" id="hintBtn">💡 Hint</button>
+    <button class="btn alt" id="lastBtn">Last trick</button>
+    <button class="btn alt" id="newBtn">New game</button>
+  </div>
+  <div class="lastt" id="lastt"></div>
+  <div class="log" id="log"></div>
+
+  <details class="rules">
+    <summary>Rules used here</summary>
+    <ul>
+      <li>24-card deck (9 through Ace), partners sit across. You + Partner vs West + East.</li>
+      <li>Right bower (Jack of trump) is highest, then Left bower (other Jack of the same colour — it counts as trump), then A, K, Q, 10, 9 of trump.</li>
+      <li>Round 1: order up the turned card or pass. Dealer picks it up and discards. Round 2: name any other suit or pass. If everyone passes twice, it's a redeal.</li>
+      <li>You must follow the suit led if you can (the Left bower follows trump, not its own suit).</li>
+      <li>Makers take 3–4 tricks = 1 pt · all 5 = 2 pts · all 5 alone = 4 pts. Makers euchred = 2 pts to defenders.</li>
+      <li>Defend alone: when someone goes alone, a defender can go alone too — euchre them solo for 4 pts.</li>
+      <li>Gold dot on a card = trump. First team to 10 wins.</li>
+    </ul>
+  </details>
+</div>
+
+<script>
+const SUITS=['S','H','D','C'],SYM={S:'♠',H:'♥',D:'♦',C:'♣'},RED={H:1,D:1},NAME=['You','West','Partner','East'];
+const $=id=>document.getElementById(id);
+const team=p=>p%2;
+const v=(p,a,b)=>p===0?a:b;
+const mate=s=>({S:'C',C:'S',H:'D',D:'H'})[s];
+const isRight=(c,t)=>!!t&&c.r===11&&c.s===t;
+const isLeft=(c,t)=>!!t&&c.r===11&&c.s===mate(t);
+const eff=(c,t)=>isLeft(c,t)?t:c.s;
+const isTrump=(c,t)=>!!t&&eff(c,t)===t;
+const rk=r=>r<=10?''+r:{11:'J',12:'Q',13:'K',14:'A'}[r];
+const cname=c=>rk(c.r)+SYM[c.s];
+function power(c,t,lead){if(isRight(c,t))return 200;if(isLeft(c,t))return 199;if(t&&c.s===t)return 100+c.r;if(lead&&c.s===lead)return c.r;return 0}
+
+// ---------- bot brains ----------
+function trumpVal(c,t){if(isRight(c,t))return 3;if(isLeft(c,t))return 2.5;if(c.s===t)return {14:2,13:1.7,12:1.5,10:1.2,9:1}[c.r];return 0}
+function strength(h,t){let s=0;for(const c of h){if(isTrump(c,t))s+=trumpVal(c,t);else if(c.r===14)s+=.9}
+  for(const x of SUITS){if(x!==t&&!h.some(c=>!isTrump(c,t)&&c.s===x))s+=.4}return s}
+function botDiscardIdx(h,t){let best=0,bv=1e9;h.forEach((c,i)=>{let val;if(isTrump(c,t))val=300+power(c,t);else{const n=h.filter(x=>!isTrump(x,t)&&x.s===c.s).length;val=c.r+(c.r===14?20:0)-(n===1?4:0)}if(val<bv){bv=val;best=i}});return best}
+function botBidDecide(p){
+  if(G.round===1){const t=G.up.s;let s;
+    if(p===G.dealer){const h=[...G.hands[p],G.up];h.splice(botDiscardIdx(h,t),1);s=strength(h,t)}
+    else{s=strength(G.hands[p],t);const uv=trumpVal(G.up,t)*.8;s+=(G.dealer===(p+2)%4)?uv:-uv}
+    return {s,t,call:s>=7.2,alone:s>=11}}
+  let bt=null,bs=-1;for(const t of SUITS){if(t===G.up.s)continue;const s=strength(G.hands[p],t);if(s>bs){bs=s;bt=t}}
+  return {s:bs,t:bt,call:bs>=7,alone:bs>=11}}
+function botPlayIdx(p){const H=G.hands[p],t=G.trump,L=legal(p);
+  const lv=i=>isTrump(H[i],t)?300+power(H[i],t):H[i].r;
+  const low=arr=>arr.reduce((a,i)=>lv(i)<lv(a)?i:a);
+  if(!G.trick.length){const tr=L.filter(i=>isTrump(H[i],t));
+    if(team(p)===team(G.maker)&&tr.length){const hi=tr.reduce((a,i)=>power(H[i],t)>power(H[a],t)?i:a);if(power(H[hi],t)>=199||tr.length>=3)return hi}
+    const aces=L.filter(i=>!isTrump(H[i],t)&&H[i].r===14);if(aces.length)return aces[0];
+    const off=L.filter(i=>!isTrump(H[i],t));return off.length?low(off):low(L)}
+  const lead=eff(G.trick[0].c,t),w=winner(G.trick),wp=power(w.c,t,lead);
+  const last=G.trick.length===nActive()-1;
+  if(team(w.p)===team(p)&&(last||wp>=13))return low(L);
+  const beat=L.filter(i=>power(H[i],t,lead)>wp);
+  if(beat.length)return beat.reduce((a,i)=>power(H[i],t,lead)<power(H[a],t,lead)?i:a);
+  return low(L)}
+
+// ---------- game state ----------
+let G={score:[0,0],dealer:0,log:[],timer:null,hands:[[],[],[],[]],taken:[0,0],trick:[]};
+function later(fn,ms){clearTimeout(G.timer);G.timer=setTimeout(fn,ms)}
+function log(m){G.log.unshift(m);if(G.log.length>80)G.log.pop()}
+function clearHint(){G.hint=-1;G.hintText=''}
+function sortHand(){const t=G.trump;const key=c=>(isTrump(c,t)?0:1+SUITS.indexOf(c.s))*1000-(isTrump(c,t)?power(c,t):c.r);G.hands[0].sort((a,b)=>key(a)-key(b))}
+
+function newGame(){clearTimeout(G.timer);G.score=[0,0];G.log=[];G.over=false;G.dealer=Math.floor(Math.random()*4);log('New game — first to 10.');newHand()}
+function newHand(){
+  const d=[];for(const s of SUITS)for(let r=9;r<=14;r++)d.push({s,r});
+  for(let i=d.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[d[i],d[j]]=[d[j],d[i]]}
+  G.hands=[[],[],[],[]];let k=0;
+  for(const pat of [[3,2,3,2],[2,3,2,3]])for(let i=0;i<4;i++){const p=(G.dealer+1+i)%4;for(let n=0;n<pat[i];n++)G.hands[p].push(d[k++])}
+  G.up=d[20];G.trump=null;G.maker=null;G.alone=false;G.out=-1;G.defAlone=-1;G.defOut=-1;G.taken=[0,0];G.trick=[];G.last=null;
+  G.round=1;G.passes=0;G.bidTurn=(G.dealer+1)%4;G.phase='bid';G.result='';clearHint();
+  sortHand();log(`${NAME[G.dealer]} ${v(G.dealer,'deal','deals')}. ${cname(G.up)} is turned up.`);render();step()}
+
+function bid(p,call,suit,alone){clearHint();
+  if(!call){log(`${NAME[p]} ${v(p,'pass','passes')}.`);G.passes++;
+    if(G.passes===4){
+      if(G.round===1){G.round=2;G.passes=0;G.bidTurn=(G.dealer+1)%4;log(`${cname(G.up)} turned down. Round 2 — name a suit.`)}
+      else{log('Everyone passed — redeal.');G.phase='wait';G.dealer=(G.dealer+1)%4;render();later(newHand,1400);return}
+    } else G.bidTurn=(G.bidTurn+1)%4;
+    render();step();return}
+  G.trump=suit;G.maker=p;G.alone=!!alone;if(alone)G.out=(p+2)%4;
+  const tail=alone?` and ${v(p,'go','goes')} alone!`:'.';
+  if(G.round===1)log(p===G.dealer?`${NAME[p]} ${v(p,'pick','picks')} up ${cname(G.up)}${tail}`:`${NAME[p]} ${v(p,'order','orders')} up ${SYM[suit]}${tail}`);
+  else log(`${NAME[p]} ${v(p,'call','calls')} ${SYM[suit]}${tail}`);
+  if(alone)log(`${NAME[G.out]} ${v(G.out,'sit','sits')} out.`);
+  sortHand();
+  if(G.round===1){
+    if(G.out===G.dealer){log('The dealer is sitting out, so the turned card stays put.');afterPickup()}
+    else{G.hands[G.dealer].push(G.up);sortHand();G.phase='discard';render();step()}
+  } else afterPickup()}
+function discard(p,i){clearHint();const c=G.hands[p].splice(i,1)[0];log(p===0?`You discarded ${cname(c)}.`:`${NAME[p]} discards.`);sortHand();afterPickup()}
+function afterPickup(){if(G.alone){G.defQ=[(G.maker+1)%4,(G.maker+3)%4];nextDefend()}else startPlay()}
+function nextDefend(){if(!G.defQ.length)return startPlay();G.defTurn=G.defQ[0];G.phase='defend';render();step()}
+function defend(p,yes){clearHint();G.defQ.shift();
+  if(yes){G.defAlone=p;G.defOut=(p+2)%4;log(`${NAME[p]} ${v(p,'defend','defends')} alone! ${NAME[G.defOut]} ${v(G.defOut,'sit','sits')} out.`);startPlay()}
+  else nextDefend()}
+const active=p=>p!==G.out&&p!==G.defOut;
+function nextActive(p){let q=(p+1)%4;while(!active(q))q=(q+1)%4;return q}
+const nActive=()=>[0,1,2,3].filter(active).length;
+function startPlay(){G.phase='play';G.turn=nextActive(G.dealer);render();step()}
+function legal(p){const h=G.hands[p],all=h.map((_,i)=>i);if(!G.trick.length)return all;const lead=eff(G.trick[0].c,G.trump);const f=all.filter(i=>eff(h[i],G.trump)===lead);return f.length?f:all}
+function winner(tr){const lead=eff(tr[0].c,G.trump);let w=tr[0];for(const e of tr)if(power(e.c,G.trump,lead)>power(w.c,G.trump,lead))w=e;return w}
+function playCard(p,i){clearHint();const c=G.hands[p].splice(i,1)[0];G.trick.push({p,c});
+  if(G.trick.length===nActive()){const w=winner(G.trick);G.phase='trickEnd';G.win=w.p;render();
+    later(()=>{G.taken[team(w.p)]++;log(`${NAME[w.p]} ${v(w.p,'take','takes')} the trick (${G.trick.map(e=>cname(e.c)).join(' ')}).`);
+      G.last={tr:G.trick,w:w.p};G.trick=[];
+      if(G.taken[0]+G.taken[1]===5)scoreHand();else{G.phase='play';G.turn=w.p;render();step()}},1200)}
+  else{G.turn=nextActive(p);render();step()}}
+function scoreHand(){const mt=team(G.maker),mk=G.taken[mt];let pts,to,msg;
+  if(mk>=3){to=mt;pts=mk===5?(G.alone?4:2):1;msg=mk===5?(G.alone?'Loner sweep — all 5 alone!':'March — all 5 tricks!'):`Made it with ${mk} tricks.`}
+  else{to=1-mt;pts=G.defAlone>=0?4:2;msg=G.defAlone>=0?'Euchred by a lone defender!':'Euchred!'}
+  G.score[to]+=pts;G.result=`${msg} ${to===0?'Your team':'Opponents'} +${pts}.`;log(G.result);
+  G.dealer=(G.dealer+1)%4;
+  if(G.score[to]>=10){G.over=true;G.phase='over';log(to===0?'🎉 You win the game!':'Opponents win the game.')}else G.phase='handEnd';
+  render()}
+
+function step(){const d=750;
+  if(G.phase==='bid'&&G.bidTurn!==0){const p=G.bidTurn;later(()=>{const b=botBidDecide(p);bid(p,b.call,b.t,b.alone)},d)}
+  else if(G.phase==='discard'&&G.dealer!==0)later(()=>discard(G.dealer,botDiscardIdx(G.hands[G.dealer],G.trump)),d);
+  else if(G.phase==='defend'&&G.defTurn!==0)later(()=>defend(G.defTurn,strength(G.hands[G.defTurn],G.trump)>=8),d);
+  else if(G.phase==='play'&&G.turn!==0)later(()=>playCard(G.turn,botPlayIdx(G.turn)),d)}
+
+// ---------- rendering ----------
+function cardH(c,cls,i){return `<div class="card ${RED[c.s]?'red':''} ${cls||''}"${i!=null?` data-i="${i}"`:''}><span class="cr">${rk(c.r)}</span><span class="cs">${SYM[c.s]}</span></div>`}
+function humanTurn(){const P=G.phase;return (P==='bid'&&G.bidTurn===0)||(P==='play'&&G.turn===0)||(P==='discard'&&G.dealer===0)||(P==='defend'&&G.defTurn===0)}
+function render(){
+  $('us').textContent=G.score[0];$('them').textContent=G.score[1];
+  $('trump').innerHTML=G.trump?`<span class="trumpchip ${RED[G.trump]?'red':''}">${SYM[G.trump]}</span>`:'<span class="trumpchip">–</span>';
+  $('tk').textContent=`${G.taken[0]} – ${G.taken[1]}`;
+  $('mk').textContent=G.maker==null?'—':`${NAME[G.maker]}${G.alone?' (alone)':''}`;
+  for(let p=0;p<4;p++){const el=$('seat'+p),b=[];
+    if(p===G.dealer&&G.phase!=='handEnd'&&G.phase!=='over')b.push('<span class="bdg d">Dealer</span>');
+    if(p===G.maker)b.push(`<span class="bdg m">Called ${SYM[G.trump]}</span>`);
+    if((p===G.maker&&G.alone)||p===G.defAlone)b.push('<span class="bdg a">Alone</span>');
+    if(p===G.out||p===G.defOut)b.push('<span class="bdg">Sitting out</span>');
+    el.querySelector('.badges').innerHTML=b.join('');
+    const t=(G.phase==='play'&&G.turn===p)||(G.phase==='bid'&&G.bidTurn===p)||(G.phase==='defend'&&G.defTurn===p)||(G.phase==='discard'&&G.dealer===p);
+    el.classList.toggle('turn',t);el.classList.toggle('out',p===G.out||p===G.defOut);
+    if(p)el.querySelector('.backs').innerHTML='<div class="back"></div>'.repeat(G.hands[p].length)}
+  let tc='';
+  if(G.phase==='bid'&&G.round===1)tc+=`<div class="upc">${cardH(G.up)}<small>Turned up</small></div>`;
+  for(const e of G.trick)tc+=`<div class="slot s${e.p}">${cardH(e.c,(G.phase==='trickEnd'&&e.p===G.win?'win ':'')+(isTrump(e.c,G.trump)?'trumpc':''))}</div>`;
+  $('trick').innerHTML=tc;
+  const h=G.hands[0];let ok=[];
+  if(G.phase==='play'&&G.turn===0)ok=legal(0);else if(G.phase==='discard'&&G.dealer===0)ok=h.map((_,i)=>i);
+  $('hand').innerHTML=h.map((c,i)=>cardH(c,(ok.length?(ok.includes(i)?'ok':'no'):'')+(G.hint===i?' hint':'')+(isTrump(c,G.trump)?' trumpc':''),i)).join('');
+  renderPanel();
+  $('log').innerHTML=G.log.map(x=>`<div>${x}</div>`).join('');
+  $('lastt').innerHTML=G.last?G.last.tr.map(e=>`<div class="lt">${cardH(e.c,e.p===G.last.w?'win':'')}${NAME[e.p]}</div>`).join(''):'<div class="lt">No tricks played yet this hand.</div>'}
+function renderPanel(){let m='',s='',b='';const P=G.phase;
+  if(P==='bid'){
+    if(G.bidTurn===0){
+      if(G.round===1){const me=G.dealer===0;
+        m=me?`Pick up ${cname(G.up)}?`:`Order up ${SYM[G.up.s]}?`;
+        s=G.dealer===2?'Your partner is dealing — ordering up gives your team that card.':me?'You\'ll pick it up and discard one.':`${NAME[G.dealer]} (opponent) would get that card.`;
+        b=`<button class="btn" data-act="call" data-s="${G.up.s}">${me?'Pick it up':'Order up'} ${SYM[G.up.s]}</button><button class="btn alt" data-act="pass">Pass</button>`}
+      else{m='Name trump or pass.';s=`${SYM[G.up.s]} was turned down and can't be called.`;
+        b=SUITS.filter(x=>x!==G.up.s).map(x=>`<button class="btn suit ${RED[x]?'red':''}" data-act="call" data-s="${x}">${SYM[x]}</button>`).join('')+'<button class="btn alt" data-act="pass">Pass</button>'}
+      b+='<div style="width:100%"></div><label class="chk"><input type="checkbox" id="aloneChk"> Go alone</label>'}
+    else{m=`${NAME[G.bidTurn]} is deciding…`;s=G.round===1?`Round 1 — ${cname(G.up)} is turned up.`:'Round 2 — naming a suit.'}}
+  else if(P==='discard'){if(G.dealer===0){m='Tap a card to discard.';s=`You picked up ${cname(G.up)}. Trump is ${SYM[G.trump]}.`}else m=`${NAME[G.dealer]} is picking up and discarding…`}
+  else if(P==='defend'){if(G.defTurn===0){m=`${NAME[G.maker]} is going alone. Defend alone?`;s='Euchre them by yourself for 4 points. Your partner sits out.';b='<button class="btn" data-act="defY">Defend alone</button><button class="btn alt" data-act="defN">Play with partner</button>'}else m=`${NAME[G.defTurn]} is deciding whether to defend alone…`}
+  else if(P==='play'){
+    if(G.turn===0){m=G.trick.length?'Your turn — follow suit if you can.':'Your lead — tap a card.';
+      if(G.trick.length){const l=eff(G.trick[0].c,G.trump);s=l===G.trump?`Trump (${SYM[l]}) was led.`:`${SYM[l]} was led.`}}
+    else m=`${NAME[G.turn]} is playing…`;
+    if(G.out===0||G.defOut===0)s='You\'re sitting out this hand.'}
+  else if(P==='trickEnd')m=`${NAME[G.win]} ${v(G.win,'take','takes')} the trick.`;
+  else if(P==='handEnd'){m=G.result;s=`Tricks: your team ${G.taken[0]}, opponents ${G.taken[1]}.`;b='<button class="btn" data-act="next">Deal next hand</button>'}
+  else if(P==='over'){m=G.score[0]>=10?'🎉 You win the game!':'Opponents win this one.';s=G.result;b='<button class="btn" data-act="newgame">Play again</button>'}
+  else if(P==='wait')m='Everyone passed — redealing…';
+  $('msg').textContent=m;$('sub').innerHTML=s;$('btns').innerHTML=b;
+  $('hintMsg').textContent=G.hintText||'';$('hintBtn').disabled=!humanTurn()}
+
+// ---------- events ----------
+$('hand').addEventListener('click',e=>{const el=e.target.closest('.card');if(!el)return;const i=+el.dataset.i;
+  if(G.phase==='discard'&&G.dealer===0)discard(0,i);
+  else if(G.phase==='play'&&G.turn===0&&legal(0).includes(i))playCard(0,i)});
+$('btns').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const a=b.dataset.act;
+  if(a==='call'){const c=$('aloneChk');bid(0,true,b.dataset.s,!!(c&&c.checked))}
+  else if(a==='pass')bid(0,false);
+  else if(a==='defY')defend(0,true);else if(a==='defN')defend(0,false);
+  else if(a==='next')newHand();else if(a==='newgame')newGame()});
+$('hintBtn').addEventListener('click',()=>{const P=G.phase;
+  if(P==='bid'){const d=botBidDecide(0);G.hintText=`Hint: your hand rates ${d.s.toFixed(1)} for ${SYM[d.t]} (about 7 to call, 11 to go alone) — I'd ${d.call?(d.alone?'call it and go alone':'call it'):'pass'}.`}
+  else if(P==='play'){G.hint=botPlayIdx(0);G.hintText='Hint: the raised card is what I\'d play.'}
+  else if(P==='discard'){G.hint=botDiscardIdx(G.hands[0],G.trump);G.hintText='Hint: discard the raised card — shorting yourself in a suit lets you trump in later.'}
+  else if(P==='defend'){const s=strength(G.hands[0],G.trump);G.hintText=s>=8?'Hint: strong trump hand — defending alone is reasonable.':'Hint: play with your partner on this one.'}
+  render()});
+$('lastBtn').addEventListener('click',()=>$('lastt').classList.toggle('show'));
+$('newBtn').addEventListener('click',newGame);
+
+newGame();
+</script>
+</body>
+</html>
