@@ -134,3 +134,5 @@ h1{font-weight:600;}
 .offer-list li{display:block;position:relative;padding-left:24px;}
 .offer-list li::before{position:absolute;left:0;top:0;}
 @media(max-width:600px){.word span{display:none;}}
+.soon{cursor:default;user-select:none;-webkit-user-select:none;text-align:center;}
+.soon::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.55;margin-right:9px;vertical-align:middle;position:relative;top:-1px;}
