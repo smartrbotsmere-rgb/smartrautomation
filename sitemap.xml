@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/snackandlearn-results/</loc>
+    <lastmod>2026-10-18T01:07:12.176Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/snackandlearn/</loc>
+    <lastmod>2026-10-18T01:07:06.397Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/demos/sams-restaurant/</loc>
+    <lastmod>2026-10-17T20:35:22.567Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/</loc>
     <lastmod>2026-10-16T23:31:57.834Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -8,16 +23,6 @@
   <url>
     <loc>https://smartrautomation.ca/euchre/</loc>
     <lastmod>2026-10-16T23:28:39.702Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/snackandlearn-results/</loc>
-    <lastmod>2026-10-16T23:06:16.929Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/snackandlearn/</loc>
-    <lastmod>2026-10-16T23:06:01.747Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -43,11 +48,6 @@
   <url>
     <loc>https://smartrautomation.ca/apps/ad-factory/</loc>
     <lastmod>2026-10-14T06:06:34.198Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/demos/sams-restaurant/</loc>
-    <lastmod>2026-10-14T06:03:14.143Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
