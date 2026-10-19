@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/snackandlearn-replay/</loc>
+    <lastmod>2026-10-19T19:28:20.877Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/blog/</loc>
     <lastmod>2026-10-19T01:51:47.087Z</lastmod>
     <changefreq>weekly</changefreq>
