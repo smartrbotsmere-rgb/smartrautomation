@@ -310,12 +310,12 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav><div class="wrap"><a class="word" href="https://smartrautomation.ca/">The Build Club <em>with Mere</em> <span>Smart 'R' Automation</span></a><div class="navlinks"><a href="#proof">What you get</a><a href="#how">How it works</a><a href="#forwho">Is this you</a><span class="nav-cta soon" aria-disabled="true">Coming soon</span></div></div></nav>
+<nav><div class="wrap"><a class="word" href="https://smartrautomation.ca/">The Build Club <em>with Mere</em> <span>Smart 'R' Automation</span></a><div class="navlinks"><a href="#proof">What you get</a><a href="#how">How it works</a><a href="#forwho">Is this you</a><a class="nav-cta" href="#offer">Founding list</a></div></div></nav>
 <section class="hero"><div class="wrap" style="display:contents;">
 <div data-aos="fade-up" data-aos-duration="700"><div class="kicker">Monthly · Live · Done-WITH-you</div>
 <h1>You didn't spend 20+ years<br>building real skills<br>just to start from<br><span class="hl">scratch on someone else's idea.</span></h1>
 <p class="hero-sub">You know things. Decades of things. What actually works, what customers actually want, what always goes wrong. That's not nothing — that's the raw material for a real online business, and most of it's just sitting there unused. The Build Club with Mere is where you turn what you already know into something small, real, and yours — a couple of hours a month, no code, no jargon, no chasing whatever's trending this week.</p>
-<div class="hero-ctas"><span class="btn-primary soon" aria-disabled="true">Coming soon</span><a href="#proof" class="btn-ghost">See a kit in action</a></div>
+<div class="hero-ctas"><a href="#offer" class="btn-primary">Join the founding list</a><a href="#proof" class="btn-ghost">See a kit in action</a></div>
 <p class="hero-note">Not your bro. Not a shortcut to "passive income." Built on land you own, not rented LLM ground.</p>
 <p class="hero-note" style="margin-top:6px;">The promise: you leave every session with something you could actually hand to a business — not a notebook full of "ideas."</p></div>
 <div class="mock" id="hero-mock" data-aos="fade-left" data-aos-delay="150" data-aos-duration="700"><div class="mock-title">A few things we've built together</div><div class="stages">
@@ -376,7 +376,18 @@
 <li><b>You get more than you paid for</b> — surprise builds whenever there's extra time.</li>
 <li><b>You're never behind</b> — miss a session? It lives in the membership site, ready whenever you are.</li>
 </ul></div>
-<div class="offer-right"><p class="price">$97<span>/month</span></p><p class="price-note">Cancel anytime</p><span class="btn-block soon" id="checkout-btn" aria-disabled="true">Coming soon</span><p class="checkout-note">Doors aren't open yet. Check back soon.</p></div>
+<div class="offer-right"><p class="price">$97<span>/month</span></p><p class="price-note">Founding members · 10 seats · opens November 1</p>
+<ul class="founding-list">
+<li><b>$97/month, locked in</b> for as long as you stay a member</li>
+<li><b>A 30-minute "build it with me" call</b> to set up your first kit together</li>
+</ul>
+<form class="ff" id="foundingForm">
+<input name="name" type="text" required placeholder="Your first name" autocomplete="given-name">
+<input name="email" type="email" required placeholder="you@example.com" autocomplete="email">
+<button type="submit" class="btn-block" id="ffBtn">Put me on the founding list</button>
+</form>
+<div id="ffStatus"></div>
+<p class="checkout-note">No payment today. Why only 10? I do every setup call myself. I'll email you before doors open on November 1. Cancel anytime once you join.</p></div>
 <div class="offer-bottom">
 <div class="offer-bottom-label">Your account also includes</div>
 <div class="account-grid">
@@ -436,6 +447,29 @@ if (window.gsap && window.ScrollTrigger) {
     scrollTrigger: { trigger: '#offer-card', start: 'top 85%' }
   });
 }
+
+// Founding list form -> flow 7216 (tags build-club-founding-list, emails Mere)
+(function(){
+  var f=document.getElementById('foundingForm'), b=document.getElementById('ffBtn'), s=document.getElementById('ffStatus');
+  if(!f) return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault(); if(b.disabled) return;
+    b.disabled=true; var t=b.textContent; b.textContent='Adding you...'; s.style.display='none';
+    var fd=new FormData(f);
+    fetch('https://paymegpt.com/api/webhooks/flow/7216/7f0ff1e51670d05451681ed2a697da6729ba65ec07f38e633f4b8b89bb962020',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({contactEmail:fd.get('email'),contactName:fd.get('name'),data:{source:'build-club-sales-page'}})
+    }).then(function(r){
+      if(!r.ok) throw new Error();
+      f.style.display='none';
+      s.textContent='You\'re on the founding list. I\'ll email you before doors open on November 1.';
+      s.style.display='block';
+    }).catch(function(){
+      b.disabled=false; b.textContent=t;
+      s.textContent='Sorry, that didn\'t go through. Please try again.'; s.style.display='block';
+    });
+  });
+})();
 </script>
 </body>
 </html>
