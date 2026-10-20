@@ -2,7 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://smartrautomation.ca/dooduty-calls/</loc>
-    <lastmod>2026-10-19T23:39:56.619Z</lastmod>
+    <lastmod>2026-10-20T14:36:05.110Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/smartrbots/</loc>
+    <lastmod>2026-10-20T13:27:39.652Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -53,11 +58,6 @@
   <url>
     <loc>https://smartrautomation.ca/blog/win-back-inactive-customers/</loc>
     <lastmod>2026-10-16T14:23:23.213Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/smartrbots/</loc>
-    <lastmod>2026-10-15T23:10:10.478Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
