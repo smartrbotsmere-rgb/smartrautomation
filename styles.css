@@ -43,10 +43,7 @@
   .who{text-align:center;margin-top:26px;text-shadow:0 2px 14px rgba(0,0,0,.5)}
   .who .name{font-size:17px;font-weight:600}
   .who .role{font-size:13px;font-weight:500;opacity:.78;margin-top:1px}
-  .wordmark{margin-top:9px;text-align:center;font-weight:800;text-transform:uppercase;letter-spacing:1px}
-  .wordmark .l1{font-size:34px;line-height:.88}
-  .wordmark .l2{font-size:30px;line-height:.95;margin-top:-1px}
-  .wordmark .r{font-size:1.55em;font-style:italic;color:var(--accent);display:inline-block;vertical-align:-.13em;line-height:0}
+  .logo{display:block;width:min(290px,76%);height:auto;margin:6px auto 0;filter:drop-shadow(0 2px 14px rgba(0,0,0,.55))}
   .stack{margin-top:26px;display:flex;flex-direction:column;gap:11px;flex:1}
   .note{
     display:flex;align-items:center;gap:14px;
