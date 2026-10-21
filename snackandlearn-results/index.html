@@ -12,13 +12,13 @@
 
 <!-- SEO Meta Tags -->
 <title>Live Vote Results · Snack &amp;amp; Learn · Smart 'R' Automation</title>
-<meta name="description" content="Live vote results for Snack &amp; Learn Episode 1, a free 1-hour live AI session from Smart 'R' Automation. Tuesday, October 20, 10am Eastern." />
+<meta name="description" content="Live vote results for Snack &amp; Learn Episode 2, a free 1-hour live AI session from Smart 'R' Automation. Tuesday, October 27, 10am Eastern." />
 <meta property="og:title" content="Live Vote Results · Snack &amp;amp; Learn · Smart 'R' Automation" />
-<meta property="og:description" content="Live vote results for Snack &amp; Learn Episode 1, a free 1-hour live AI session from Smart 'R' Automation. Tuesday, October 20, 10am Eastern." />
+<meta property="og:description" content="Live vote results for Snack &amp; Learn Episode 2, a free 1-hour live AI session from Smart 'R' Automation. Tuesday, October 27, 10am Eastern." />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Live Vote Results · Snack &amp;amp; Learn · Smart 'R' Automation" />
-<meta name="twitter:description" content="Live vote results for Snack &amp; Learn Episode 1, a free 1-hour live AI session from Smart 'R' Automation. Tuesday, October 20, 10am Eastern." />
+<meta name="twitter:description" content="Live vote results for Snack &amp; Learn Episode 2, a free 1-hour live AI session from Smart 'R' Automation. Tuesday, October 27, 10am Eastern." />
 <!-- End SEO Meta Tags -->
 <meta name="sheet-data-url" content="https://paymegpt.com/api/public/landing-pages/8055/sheet-data">
 <script data-lp-token-hydrate>
@@ -376,9 +376,9 @@
 </div></nav>
 
 <header class="hero" data-section="hero"><div class="wrap" style="position:relative;z-index:1">
-  <p class="kicker">Snack &amp; Learn · Episode 1</p>
+  <p class="kicker">Snack &amp; Learn · Episode 2</p>
   <h1>What should we build live?</h1>
-  <p class="when">Tuesday, October 20 · 10am Eastern · 1 hour · Free</p>
+  <p class="when">Tuesday, October 27 · 10am Eastern · 1 hour · Free</p>
 </div></header>
 
 <main data-section="results"><div class="wrap">
@@ -393,12 +393,14 @@
 </div></footer>
 
 <script>
+// Only rows with this Episode value are counted
+var EPISODE='Ep 2';
 var OPTS=[
-["Missed-Call AI Receptionist","An AI that answers and texts back when you miss a call."],
-["Contractor Hours & Auto-Invoice","Log your hours, invoices send themselves."],
-["Sales Content Generator","A month of posts that start real conversations."],
 ["Bedtime Story App","Personalized bedtime stories, built as an app you could sell."],
-["Random-Reward Loyalty Card","A loyalty card that sometimes surprises customers with a bonus."]];
+["Whack-A-Mole Discount Game","A quick game customers play to win a discount."],
+["AI Salon Booking Agent","An AI that books appointments right in the chat."],
+["Self-Improving AI Agent","An AI that reviews its own calls every week and gets better."],
+["Screenshot How-To Videos","Turn a few screenshots into a branded how-to video."]];
 var FALLBACK_EP='https://paymegpt.com/api/public/landing-pages/8055/sheet-data';
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
 var box=document.getElementById('opts');
@@ -411,7 +413,11 @@ function load(){
     if(!rows){document.getElementById('err').style.display='block';return;}
     document.getElementById('err').style.display='none';
     var n=OPTS.map(function(){return 0}),tot=0;
-    rows.forEach(function(r){var v=String(r.Vote||'').trim().toLowerCase();OPTS.forEach(function(o,i){if(v===o[0].toLowerCase()){n[i]++;tot++;}});});
+    rows.forEach(function(r){
+      if(String(r.Episode||'').trim()!==EPISODE)return;
+      var v=String(r.Vote||'').trim().toLowerCase();
+      OPTS.forEach(function(o,i){if(v===o[0].toLowerCase()){n[i]++;tot++;}});
+    });
     var max=Math.max.apply(null,n);
     n.map(function(c,i){return i}).sort(function(a,b){return n[b]-n[a]}).forEach(function(i,rank){
       var el=document.getElementById('o'+i);el.style.order=rank;
