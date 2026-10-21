@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://smartrautomation.ca/dooduty-calls/</loc>
-    <lastmod>2026-10-20T14:36:05.110Z</lastmod>
+    <loc>https://smartrautomation.ca/</loc>
+    <lastmod>2026-10-21T15:00:54.487Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://smartrautomation.ca/smartrbots/</loc>
-    <lastmod>2026-10-20T13:27:39.652Z</lastmod>
+    <lastmod>2026-10-21T08:01:37.215Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/dooduty-calls/</loc>
+    <lastmod>2026-10-20T16:44:08.816Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/snackandlearn/</loc>
+    <lastmod>2026-10-20T16:10:22.193Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -28,16 +38,6 @@
   <url>
     <loc>https://smartrautomation.ca/blog/punch-card-ideas/</loc>
     <lastmod>2026-10-19T01:51:37.635Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/</loc>
-    <lastmod>2026-10-18T18:04:48.957Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/snackandlearn/</loc>
-    <lastmod>2026-10-18T01:07:20.211Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
