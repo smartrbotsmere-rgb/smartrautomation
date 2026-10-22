@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/apps/social-post-generator/</loc>
+    <lastmod>2026-10-22T16:06:25.869Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/snackandlearn-replay/</loc>
     <lastmod>2026-10-22T16:01:02.522Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -8,11 +13,6 @@
   <url>
     <loc>https://smartrautomation.ca/euchre/</loc>
     <lastmod>2026-10-22T16:00:52.027Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/apps/social-post-generator/</loc>
-    <lastmod>2026-10-22T16:00:39.990Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
