@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/apps/</loc>
+    <lastmod>2026-10-22T15:55:38.985Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/demos/</loc>
     <lastmod>2026-10-22T15:55:31.261Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -18,11 +23,6 @@
   <url>
     <loc>https://smartrautomation.ca/bookmere/</loc>
     <lastmod>2026-10-22T15:54:59.387Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/apps/</loc>
-    <lastmod>2026-10-22T15:54:58.916Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
