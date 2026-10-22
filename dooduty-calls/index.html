@@ -11,10 +11,13 @@
 
 <!-- SEO Meta Tags -->
 <title>Doo Duty Call Tracker</title>
+<meta name="description" content="Live call log for Doo Duty's AI receptionist: every call it took, newest first, with what needs a follow-up. A Smart 'R' Automation demo." />
 <meta property="og:title" content="Doo Duty Call Tracker" />
+<meta property="og:description" content="Live call log for Doo Duty's AI receptionist: every call it took, newest first, with what needs a follow-up. A Smart 'R' Automation demo." />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Doo Duty Call Tracker" />
+<meta name="twitter:description" content="Live call log for Doo Duty's AI receptionist: every call it took, newest first, with what needs a follow-up. A Smart 'R' Automation demo." />
 <!-- End SEO Meta Tags -->
 <meta name="sheet-data-url" content="https://paymegpt.com/api/public/landing-pages/8378/sheet-data">
 <script data-lp-token-hydrate>
@@ -338,9 +341,15 @@
 </head>
 <body>
 <header>
-  <h1>Doo Duty Call Tracker</h1>
-  <p>Every call your receptionist took, newest first.</p>
+  <div class="hrow">
+    <div>
+      <h1>Doo Duty Call Tracker</h1>
+      <p>Every call your receptionist took, newest first.</p>
+    </div>
+    <button class="pmtoggle" id="pmtoggle" type="button" aria-pressed="false">Presenter mode: off</button>
+  </div>
 </header>
+<div class="pmbanner" id="pmbanner">Presenter mode is on: caller details are hidden</div>
 <main>
   <div class="stats">
     <div class="stat red" data-f="Red"><b id="nRed">0</b><span>Call today</span></div>
@@ -353,33 +362,79 @@
 <script>
 (function(){
   var BASE = 'https://paymegpt.com';
+  var KEY = 'dd_presenter_mode';
   var filter = null, rows = [];
+
+  /* Presenter mode: OFF by default. Turned on with ?presenter=1 or the header button.
+     Once on it stays on in this browser tab (survives refresh) until switched off. */
+  var presenter = false;
+  try { presenter = sessionStorage.getItem(KEY) === '1'; } catch(e) {}
+  try {
+    var q = new URLSearchParams(location.search).get('presenter');
+    if (q === '1') presenter = true;
+    if (q === '0') presenter = false;
+  } catch(e) {}
+  function savePresenter(){ try { sessionStorage.setItem(KEY, presenter ? '1' : '0'); } catch(e) {} }
+  savePresenter();
+
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
   function urgency(u){u=String(u||'').trim().toLowerCase();if(u.indexOf('red')===0)return 'Red';if(u.indexOf('yel')===0)return 'Yellow';if(u.indexOf('gre')===0)return 'Green';return 'Yellow';}
   function label(u){return u==='Red'?'Call today':u==='Green'?'All good':'Follow up';}
   function digits(n){return String(n||'').replace(/\D/g,'');}
   function prettyPhone(n){var d=digits(n);if(d.length===11&&d[0]==='1')d=d.slice(1);return d.length===10?'('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6):String(n||'');}
   function telLink(n){var d=digits(n);if(d.length===10)d='1'+d;return d?'tel:+'+d:'';}
-  function when(t){var d=new Date(t);if(isNaN(d))return esc(t);return d.toLocaleString('en-CA',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});}
+  function when(t){var d=new Date(t);if(isNaN(d))return esc(t);return d.toLocaleString('en-CA',{timeZone:'America/Toronto',weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});}
   function rec(u){u=String(u||'').trim();if(!u)return '';return /^https?:/.test(u)?u:BASE+(u[0]==='/'?'':'/')+u;}
-  function card(r,i){
-    var u=urgency(r['Urgency']), tel=telLink(r['Callback Number']), audio=rec(r['Recording']);
-    var addr=[r['Address'],r['Town']].filter(function(x){return x&&x!=='Not given';}).join(', ');
+
+  /* Masking helpers: applied to the data BEFORE it is put on the page. */
+  function maskPhone(n){var d=digits(n);return d.length>=4?'•••-•••-'+d.slice(-4):'•••';}
+  function maskName(n){
+    n=String(n||'').trim(); if(!n) return 'Unknown caller';
+    var parts=n.split(/\s+/); if(parts.length===1) return parts[0];
+    return parts[0]+' '+parts[parts.length-1].charAt(0).toUpperCase()+'.';
+  }
+  function view(r){
+    if(!presenter) return r;
+    return {
+      'Timestamp':r['Timestamp'],'Call Duration':r['Call Duration'],'Urgency':r['Urgency'],
+      'Service Wanted':r['Service Wanted'],'Dogs':r['Dogs'],'Start Day':r['Start Day'],
+      'Town':r['Town'],
+      'Caller Name':maskName(r['Caller Name']),
+      'Callback Number':maskPhone(r['Callback Number']),
+      'Next Step':'Details hidden in presenter mode.',
+      '_masked':true
+    };
+  }
+
+  function card(src,i){
+    var r=view(src), m=!!r._masked;
+    var u=urgency(r['Urgency']);
+    var tel=m?'':telLink(r['Callback Number']), audio=m?'':rec(r['Recording']);
+    var addr=m?(r['Town']&&r['Town']!=='Not given'?r['Town']:''):[r['Address'],r['Town']].filter(function(x){return x&&x!=='Not given';}).join(', ');
+    var callBtn=m?'<span class="masked">'+esc(r['Callback Number'])+'</span>':(tel?'<a class="call" href="'+tel+'">Call '+esc(prettyPhone(r['Callback Number']))+'</a>':'');
     return '<div class="card '+u+'">'+
       '<div class="top"><div><p class="name">'+esc(r['Caller Name']||'Unknown caller')+'</p><div class="when">'+when(r['Timestamp'])+(r['Call Duration']?' · '+esc(r['Call Duration']):'')+'</div></div><span class="pill '+u+'">'+label(u)+'</span></div>'+
       '<div class="what">'+esc(r['Service Wanted']||'')+(addr?' · '+esc(addr):'')+'</div>'+
       '<div class="next"><small>Next step</small>'+esc(r['Next Step']||'Review the call.')+'</div>'+
-      '<div class="actions">'+(tel?'<a class="call" href="'+tel+'">Call '+esc(prettyPhone(r['Callback Number']))+'</a>':'')+'<button class="more" type="button" data-i="'+i+'">Details</button></div>'+
+      '<div class="actions">'+callBtn+'<button class="more" type="button" data-i="'+i+'">Details</button></div>'+
       '<div class="details" id="d'+i+'">'+
         '<div class="row"><span>Dogs</span><span>'+esc(r['Dogs'])+'</span></div>'+
         '<div class="row"><span>Start day</span><span>'+esc(r['Start Day'])+'</span></div>'+
-        '<div class="row"><span>Gate/access</span><span>'+esc(r['Access Notes'])+'</span></div>'+
-        '<div class="summary">'+esc(r['Summary'])+'</div>'+
-        (audio?'<audio controls preload="none" src="'+esc(audio)+'"></audio>':'')+
-        (r['Call Grade']?'<div class="grade"><b>Receptionist grade:</b> '+esc(r['Call Grade'])+'</div>':'')+
+        (m?'<div class="hidden-note">Address, access notes, summary, recording and grade are hidden in presenter mode.</div>':
+          '<div class="row"><span>Gate/access</span><span>'+esc(r['Access Notes'])+'</span></div>'+
+          '<div class="summary">'+esc(r['Summary'])+'</div>'+
+          (audio?'<audio controls preload="none" src="'+esc(audio)+'"></audio>':'')+
+          (r['Call Grade']?'<div class="grade"><b>Receptionist grade:</b> '+esc(r['Call Grade'])+'</div>':''))+
       '</div></div>';
   }
+  function applyPresenterUI(){
+    document.body.classList.toggle('presenter',presenter);
+    var b=document.getElementById('pmtoggle');
+    b.setAttribute('aria-pressed',presenter?'true':'false');
+    b.textContent='Presenter mode: '+(presenter?'on':'off');
+  }
   function render(){
+    applyPresenterUI();
     var c={Red:0,Yellow:0,Green:0};rows.forEach(function(r){c[urgency(r['Urgency'])]++;});
     ['Red','Yellow','Green'].forEach(function(k){document.getElementById('n'+k).textContent=c[k];});
     document.querySelectorAll('.stat').forEach(function(s){s.classList.toggle('on',s.getAttribute('data-f')===filter);});
@@ -392,15 +447,17 @@
     fetch(meta.content,{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
       var list=Array.isArray(d)?d:(d.data||d.rows||[]);
       rows=list.filter(function(r){return r&&(r['Caller Name']||r['Summary']);}).sort(function(a,b){return new Date(b['Timestamp'])-new Date(a['Timestamp']);});
-      document.getElementById('status').textContent=rows.length+' call'+(rows.length===1?'':'s')+' · updated '+new Date().toLocaleTimeString('en-CA',{hour:'numeric',minute:'2-digit'});
+      document.getElementById('status').textContent=rows.length+' call'+(rows.length===1?'':'s')+' · updated '+new Date().toLocaleTimeString('en-CA',{timeZone:'America/Toronto',hour:'numeric',minute:'2-digit'});
       render();
     }).catch(function(){document.getElementById('status').textContent='Couldn\'t load calls. Tap Refresh.';});
   }
   document.addEventListener('click',function(e){
+    if(e.target.closest('#pmtoggle')){presenter=!presenter;savePresenter();render();return;}
     var b=e.target.closest('.more');if(b){var el=document.getElementById('d'+b.getAttribute('data-i'));var open=el.classList.toggle('open');b.textContent=open?'Hide':'Details';return;}
     var s=e.target.closest('.stat');if(s){var f=s.getAttribute('data-f');filter=(filter===f)?null:f;render();}
   });
   document.getElementById('refresh').addEventListener('click',load);
+  applyPresenterUI();
   load();setInterval(load,30000);
 })();
 </script>
