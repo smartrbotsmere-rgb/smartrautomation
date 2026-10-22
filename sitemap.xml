@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://smartrautomation.ca/snackandlearn/</loc>
-    <lastmod>2026-10-22T04:23:11.756Z</lastmod>
+    <loc>https://smartrautomation.ca/</loc>
+    <lastmod>2026-10-22T15:55:21.024Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/roi/loyalty-card/</loc>
+    <lastmod>2026-10-22T15:54:59.968Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/bookmere/</loc>
+    <lastmod>2026-10-22T15:54:59.387Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/apps/</loc>
+    <lastmod>2026-10-22T15:54:58.916Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/demos/</loc>
+    <lastmod>2026-10-22T15:54:58.196Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://smartrautomation.ca/smartrbots/</loc>
-    <lastmod>2026-10-22T03:59:29.008Z</lastmod>
+    <lastmod>2026-10-22T12:43:55.376Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://smartrautomation.ca/</loc>
-    <lastmod>2026-10-22T03:42:00.996Z</lastmod>
+    <loc>https://smartrautomation.ca/snackandlearn/</loc>
+    <lastmod>2026-10-22T04:23:11.756Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -61,11 +81,6 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://smartrautomation.ca/apps/</loc>
-    <lastmod>2026-10-15T16:34:29.404Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://smartrautomation.ca/apps/ad-factory/</loc>
     <lastmod>2026-10-14T06:06:34.198Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -88,21 +103,6 @@
   <url>
     <loc>https://smartrautomation.ca/roi/points-program/</loc>
     <lastmod>2026-10-14T02:05:53.398Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/roi/loyalty-card/</loc>
-    <lastmod>2026-10-14T02:05:44.621Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/demos/</loc>
-    <lastmod>2026-10-14T02:05:30.216Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/bookmere/</loc>
-    <lastmod>2026-10-14T02:05:12.732Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
