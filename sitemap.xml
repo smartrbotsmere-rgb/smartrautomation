@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/</loc>
+    <lastmod>2026-10-22T03:42:00.996Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/smartrbots/</loc>
+    <lastmod>2026-10-22T03:32:36.983Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/snackandlearn-results/</loc>
     <lastmod>2026-10-21T15:24:54.107Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -8,16 +18,6 @@
   <url>
     <loc>https://smartrautomation.ca/snackandlearn/</loc>
     <lastmod>2026-10-21T15:24:46.691Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/</loc>
-    <lastmod>2026-10-21T15:00:54.487Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/smartrbots/</loc>
-    <lastmod>2026-10-21T08:01:37.215Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
