@@ -44,7 +44,19 @@
   .who .name{font-size:17px;font-weight:600}
   .who .role{font-size:13px;font-weight:500;opacity:.78;margin-top:1px}
   .logo{display:block;width:min(290px,76%);height:auto;margin:6px auto 0;filter:drop-shadow(0 2px 14px rgba(0,0,0,.55))}
-  .stack{margin-top:26px;display:flex;flex-direction:column;gap:11px;flex:1}
+  .pitch{
+    margin-top:22px;text-align:center;
+    background:var(--glass);
+    -webkit-backdrop-filter:blur(22px) saturate(150%);
+    backdrop-filter:blur(22px) saturate(150%);
+    border:.5px solid var(--glass-line);
+    border-radius:20px;padding:16px 18px;
+    box-shadow:0 6px 22px rgba(0,0,0,.28);
+  }
+  .pitch h1{font-size:19px;font-weight:700;line-height:1.25;letter-spacing:-.2px}
+  .pitch p{font-size:13.5px;line-height:1.45;opacity:.82;margin-top:8px}
+  .pitch p b{color:var(--accent);font-weight:600;opacity:1}
+  .stack{margin-top:14px;display:flex;flex-direction:column;gap:11px;flex:1}
   .note{
     display:flex;align-items:center;gap:14px;
     background:var(--glass);
@@ -64,17 +76,18 @@
     box-shadow:inset 0 1px 1px rgba(255,255,255,.25),0 2px 6px rgba(0,0,0,.3);
   }
   .t-bot{background:linear-gradient(160deg,#2A4BB8,#042069)}
-  .t-yt{background:linear-gradient(160deg,#FF5A5A,#E01616)}
+  .t-snack{background:linear-gradient(160deg,#FFB13D,#F08200)}
   .t-blog{background:linear-gradient(160deg,#38BDF8,#0284C7)}
-  .t-site{background:linear-gradient(160deg,#34D1A2,#0FA47A)}
-  .t-shop{background:linear-gradient(160deg,#FFB13D,#F08200)}
-  .t-call{background:linear-gradient(160deg,#5AA7FF,#1E6FE6)}
   .note .body{flex:1;min-width:0}
   .note .ttl{display:block;font-size:15.5px;font-weight:600;line-height:1.2}
   .note .sub{display:block;font-size:12.5px;opacity:.72;margin-top:2px}
   .note .chev{opacity:.55;flex-shrink:0}
   .note.feat{background:rgba(4,32,105,.62);border-color:rgba(191,208,255,.55)}
   @media(hover:hover){.note.feat:hover{background:rgba(11,46,134,.7)}}
+  .proof{font-size:11.5px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;opacity:.7;text-align:center;margin:8px 0 -2px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+  .dfy{text-align:center;font-size:13px;margin-top:4px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+  .dfy span{opacity:.75}
+  .dfy a{color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:3px}
   .dock{display:flex;justify-content:center;gap:64px;margin-top:24px}
   .dockbtn{
     width:58px;height:58px;border-radius:50%;
