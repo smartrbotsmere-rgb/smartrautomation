@@ -23,9 +23,10 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;background:rgba(255,255,255,.1);padding:7px 14px;border-radius:999px}
 .dot{width:8px;height:8px;border-radius:50%;background:#7CF0B0;box-shadow:0 0 0 0 rgba(124,240,176,.7);animation:pulse 1.8s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(124,240,176,0)}100%{box-shadow:0 0 0 0 rgba(124,240,176,0)}}
-.hero h1{font-size:clamp(52px,10vw,104px);margin:22px 0 18px}
+.hero h1{font-size:clamp(52px,10vw,104px);margin:22px 0 14px}
 .hero h1 em{font-style:normal;color:#BFD0FF}
-.hero .lede{font-size:clamp(18px,2.4vw,22px);max-width:580px;opacity:.92}
+.hero .for{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(22px,3.4vw,32px);line-height:1.2;max-width:720px;color:#BFD0FF;margin-bottom:16px}
+.hero .lede{font-size:clamp(18px,2.4vw,21px);max-width:620px;opacity:.92}
 .when{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 34px}
 .when span{background:#fff;color:var(--navy);font-weight:700;padding:10px 16px;border-radius:12px;font-size:15px}
 .btn{display:inline-block;background:#fff;color:var(--navy);font-weight:700;font-size:17px;text-decoration:none;padding:16px 28px;border-radius:999px;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s}
@@ -33,11 +34,22 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px
 .btn-navy{background:var(--navy);color:#fff}
 .btn-navy:hover{background:var(--navy-2)}
 
-/* STEPS */
 section{padding:72px 0}
 .kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy)}
 h2{font-size:clamp(34px,5vw,52px);margin:10px 0 14px;color:var(--navy)}
-.sub{color:var(--muted);font-size:18px;max-width:560px}
+.sub{color:var(--muted);font-size:18px;max-width:600px}
+
+/* IS THIS YOU */
+.you{display:grid;gap:14px;margin-top:30px}
+@media(min-width:760px){.you{grid-template-columns:repeat(3,1fr)}}
+.you div{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--navy);border-radius:18px;padding:22px;font-size:17px;font-weight:500}
+.leave{background:var(--tint);border-radius:22px;padding:28px 24px;margin-top:22px}
+.leave h3{font-size:24px;color:var(--navy);margin-bottom:12px}
+.leave ul{list-style:none;display:grid;gap:10px}
+.leave li{padding-left:30px;position:relative;font-size:17px}
+.leave li::before{content:"✓";position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:13px;display:grid;place-items:center;font-weight:700}
+
+/* STEPS */
 .steps{display:grid;gap:16px;margin-top:36px}
 @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
 .step{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
@@ -61,6 +73,16 @@ h2{font-size:clamp(34px,5vw,52px);margin:10px 0 14px;color:var(--navy)}
 .item-row{display:flex;align-items:baseline;gap:10px}
 @media(max-width:560px){.item .name{white-space:normal}.item .lead{display:none}}
 .results-link{display:inline-block;margin-top:22px;font-weight:600;color:var(--navy)}
+
+/* SHARE */
+.share{background:var(--card);border:2px dashed var(--navy);border-radius:22px;padding:26px 22px;margin-top:28px;text-align:center}
+.share h3{font-size:26px;color:var(--navy)}
+.share p{color:var(--muted);margin:6px auto 16px;max-width:520px}
+.share-btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.sbtn{font:inherit;font-weight:700;font-size:15px;padding:12px 18px;border-radius:999px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.sbtn.primary{background:var(--navy);color:#fff}
+.sbtn:hover{transform:translateY(-1px)}
+.copied{display:block;font-size:14px;font-weight:600;color:#0FA47A;margin-top:10px;min-height:20px}
 
 /* FORM */
 .signup{background:var(--navy);border-radius:28px;margin:0 12px;padding:72px 0;color:#fff}
@@ -90,6 +112,7 @@ legend{font-weight:600;font-size:15px;margin-bottom:12px}
 .optin input{width:20px;height:20px;margin-top:2px;accent-color:var(--navy);flex:none}
 .fine{font-size:14px;color:var(--muted)}
 #formStatus{display:none;background:var(--tint);color:var(--navy);border-radius:16px;padding:22px;font-weight:600;font-size:18px;margin-top:20px}
+#formStatus .share{margin-top:18px;background:#fff}
 
 /* ABOUT + FOOTER */
 .about{display:grid;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px}
