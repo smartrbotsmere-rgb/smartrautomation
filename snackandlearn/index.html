@@ -17,15 +17,15 @@
 
 
 <!-- SEO Meta Tags -->
-<title>Snack &amp; Learn — free live AI build for Gen X women</title>
-<meta name="description" content="20+ years of know-how? Watch a real AI tool get built live, start to finish, in plain English. Free · Tue Oct 27 · 10am ET. Vote on what gets built." />
-<meta property="og:title" content="Snack &amp; Learn — free live AI build for Gen X women" />
-<meta property="og:description" content="20+ years of know-how? Watch a real AI tool get built live, start to finish, in plain English. Free · Tue Oct 27 · 10am ET. Vote on what gets built." />
+<title>Snack &amp; Learn — turn screenshots into how-to videos (free, live)</title>
+<meta name="description" content="20+ years of know-how? Watch screenshots become animated how-to videos with a voiceover, no filming. Free · Tue Nov 3 · 10am ET." />
+<meta property="og:title" content="Snack &amp; Learn — turn screenshots into how-to videos (free, live)" />
+<meta property="og:description" content="20+ years of know-how? Watch screenshots become animated how-to videos with a voiceover, no filming. Free · Tue Nov 3 · 10am ET." />
 <meta property="og:image" content="https://paymegpt.com/objects/quick-uploads/7/9cae244acd5883dd.jpg" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Snack &amp; Learn — free live AI build for Gen X women" />
-<meta name="twitter:description" content="20+ years of know-how? Watch a real AI tool get built live, start to finish, in plain English. Free · Tue Oct 27 · 10am ET. Vote on what gets built." />
+<meta name="twitter:title" content="Snack &amp; Learn — turn screenshots into how-to videos (free, live)" />
+<meta name="twitter:description" content="20+ years of know-how? Watch screenshots become animated how-to videos with a voiceover, no filming. Free · Tue Nov 3 · 10am ET." />
 <meta name="twitter:image" content="https://paymegpt.com/objects/quick-uploads/7/9cae244acd5883dd.jpg" />
 <!-- End SEO Meta Tags -->
 <script data-lp-token-hydrate>
@@ -101,7 +101,7 @@
       var overlay=document.createElement('div');overlay.id='donation-success-overlay';
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">'+esc(thankYouMsg)+'</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(successSubtext)+'</p><button id="lp-don-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">'+esc(thankYouMsg)+'</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(successSubtext)+'</p><button id="lp-don-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var dBtn=document.getElementById('lp-don-success-btn');
       if(dBtn){dBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -289,7 +289,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var pBtn=document.getElementById('lp-pay-success-btn');
       if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -366,7 +366,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||'Thank you for your order.';
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var cBtn=document.getElementById('lp-cart-success-btn');
       if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -378,70 +378,61 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav><div class="wrap">
   <a class="brand" href="https://smartrautomation.ca/">Smart 'R' Automation</a>
   <a class="pill" href="#signup">Save your spot</a>
 </div></nav>
 
-<!-- HERO -->
 <header class="hero" data-section="hero"><div class="wrap" style="position:relative;z-index:1">
-  <span class="eyebrow"><span class="dot"></span>Free live session · Episode 2</span>
+  <span class="eyebrow"><span class="dot"></span>Free live session · Episode 3</span>
   <h1>Snack <em>&amp;</em> Learn</h1>
   <p class="for">For Gen X women who've spent 20+ years getting really good at something.</p>
-  <p class="lede">Watch me build a real AI tool live, start to finish, in one hour, in plain English. Then see how <b>your</b> know-how could become something people pay for. No tech skills needed, nothing to build along.</p>
-  <div class="when"><span>Tuesday, October 27</span><span>10am Eastern</span><span>1 hour</span><span>Free</span></div>
+  <p class="lede">Watch me turn plain screenshots into a polished, animated how-to video, with a voiceover in my own voice, live, in plain English. No filming, no editing software, nothing to build along.</p>
+  <div class="when"><span>Tuesday, November 3</span><span>10am Eastern</span><span>1 hour</span><span>Free</span></div>
   <a class="btn" href="#signup">Save my spot</a>
 </div></header>
 
-<!-- IS THIS YOU -->
 <section data-section="is-this-you"><div class="wrap">
   <p class="kicker">Is this you?</p>
-  <h2>Gen X, 20+ years in, and wondering where AI fits.</h2>
+  <h2>You know it cold. Explaining it again is the tiring part.</h2>
   <div class="you">
-    <div>You know your stuff cold, and AI feels like it's passing you by.</div>
-    <div>You've seen the AI courses. You've never seen anyone actually build something start to finish.</div>
-    <div>You want extra income, or an easier way to run what you've got, without becoming "a tech person."</div>
+    <div>You answer the same "how do I…" questions over and over.</div>
+    <div>You'd love tutorials or guides, but filming yourself? Hard pass.</div>
+    <div>You want something you could sell or share, without becoming "a tech person."</div>
   </div>
   <div class="leave">
     <h3>You'll leave knowing:</h3>
     <ul>
-      <li>What one real AI build looks like, with no skipped steps and no hype.</li>
-      <li>What's actually realistic for you to build, and what isn't.</li>
-      <li>One idea for turning your own expertise into a tool. Ask me live.</li>
+      <li>How screenshots become a step-by-step video, with no skipped steps and no hype.</li>
+      <li>How I add a natural voiceover that sounds like me, without recording a word.</li>
+      <li>One idea for turning what you know into videos people actually watch. Ask me live.</li>
     </ul>
   </div>
 </div></section>
 
-<!-- HOW IT WORKS -->
 <section data-section="how-it-works" style="padding-top:0"><div class="wrap">
   <p class="kicker">How it works</p>
   <h2>Three bites. That's it.</h2>
   <div class="steps">
-    <div class="step"><b>1</b><h3>Save your spot &amp; vote</h3><p>Pick what gets built live. Most votes wins.</p></div>
-    <div class="step"><b>2</b><h3>Add your ticket</h3><p>It lands in your phone wallet and reminds you before we start.</p></div>
-    <div class="step"><b>3</b><h3>Show up, or catch the replay</h3><p>Watch live, or get the replay for 7 days after.</p></div>
+    <div class="step"><b>1</b><h3>Save your spot</h3><p>Takes 30 seconds. You'll get a confirmation email right away.</p></div>
+    <div class="step"><b>2</b><h3>Add your ticket</h3><p>It lands in your phone wallet and reminds you before we start. Already have one from last time? It's updated for you.</p></div>
+    <div class="step"><b>3</b><h3>Show up, or catch the replay</h3><p>Watch live, or catch the replay afterwards.</p></div>
   </div>
 </div></section>
 
-<!-- MENU -->
 <section data-section="menu" id="menu" style="padding-top:0"><div class="wrap">
   <p class="kicker">On the menu</p>
-  <h2>Today's specials</h2>
-  <p class="sub">Five real builds. You vote, one gets made live.</p>
+  <h2>This week's special</h2>
   <div class="menu">
-    <div class="menu-head"><h3>Snack &amp; Learn · Ep 2</h3><p>Pick one when you sign up</p></div>
-    <div class="item"><div class="item-main"><div class="item-row"><span class="name">Bedtime Story App</span><span class="lead"></span><span class="tag">Sellable app</span></div><span class="desc">A product you could sell to parents: personalized bedtime stories.</span></div></div>
-    <div class="item"><div class="item-main"><div class="item-row"><span class="name">Whack-A-Mole Discount Game</span><span class="lead"></span><span class="tag">Marketing</span></div><span class="desc">A quick game that brings a shop's customers back for a discount.</span></div></div>
-    <div class="item"><div class="item-main"><div class="item-row"><span class="name">AI Salon Booking Agent</span><span class="lead"></span><span class="tag">Booking</span></div><span class="desc">The kind of tool businesses pay monthly for: books appointments in the chat.</span></div></div>
-    <div class="item"><div class="item-main"><div class="item-row"><span class="name">Self-Improving AI Agent</span><span class="lead"></span><span class="tag">Smart AI</span></div><span class="desc">An assistant that reviews its own calls and gets better on its own every week.</span></div></div>
-    <div class="item"><div class="item-main"><div class="item-row"><span class="name">Screenshot How-To Videos</span><span class="lead"></span><span class="tag">Video</span></div><span class="desc">Turn what you know into branded how-to videos, without filming.</span></div></div>
+    <div class="menu-head"><h3>Snack &amp; Learn · Ep 3</h3><p>Tuesday, November 3 · 10am ET</p></div>
+    <div class="item"><div class="item-main"><div class="item-row"><span class="name">Screenshots → How-To Videos</span><span class="lead"></span><span class="tag">Video</span></div><span class="desc">The tool I use to turn screenshots into branded, step-by-step tutorial videos: animated steps, captions, music and my own voice.</span></div></div>
+    <div class="item"><div class="item-main"><div class="item-row"><span class="name">The voiceover trick</span><span class="lead"></span><span class="tag">Voice</span></div><span class="desc">How I make a voiceover that sounds like me, without sitting in front of a mic.</span></div></div>
+    <div class="item"><div class="item-main"><div class="item-row"><span class="name">Live Q&amp;A</span><span class="lead"></span><span class="tag">Ask me</span></div><span class="desc">Bring the thing you keep explaining. We'll talk about how it could become a video.</span></div></div>
   </div>
-  <a class="results-link" href="https://smartrautomation.ca/snackandlearn-results">See the live vote results →</a>
 
   <div class="share">
-    <h3>Want your pick to win?</h3>
-    <p>Get a friend to vote too. Know someone with 20+ years of know-how who keeps saying AI isn't for her? Send her this.</p>
+    <h3>Know someone who'd love this?</h3>
+    <p>Got a friend with 20+ years of know-how who keeps saying AI isn't for her? Send her this.</p>
     <div class="share-btns">
       <button type="button" class="sbtn primary" data-share="native">Share</button>
       <a class="sbtn" data-share="sms" href="#">Text a friend</a>
@@ -451,12 +442,11 @@
   </div>
 </div></section>
 
-<!-- SIGN-UP FORM: field names must match flow 7285 exactly -->
+<!-- SIGN-UP FORM: field names must match flow 8613 exactly -->
 <section class="signup" id="signup" data-section="signup"><div class="wrap">
   <p class="kicker" style="color:#BFD0FF">Reserve your seat</p>
   <h2>Save your spot</h2>
   <p class="sub">Takes 30 seconds. You'll get a confirmation email and a ticket for your phone.</p>
-
   <div class="form-card">
     <form id="signupForm">
       <div class="row">
@@ -474,19 +464,9 @@
           <option value="5 - I build with it">5 - I build with it</option>
         </select>
       </label>
-      <label class="f">What's one thing you wish you could hand off to AI? <span class="hint">(optional)</span>
-        <textarea name="wish_to_automate" rows="3" placeholder="Replying to leads, social posts, chasing invoices..."></textarea>
+      <label class="f">What's one thing you keep explaining that you'd love to turn into a video? <span class="hint">(optional)</span>
+        <textarea name="wish_to_automate" rows="3" placeholder="How to book with me, how to use my product, my onboarding steps..."></textarea>
       </label>
-      <fieldset>
-        <legend>What should we build live?</legend>
-        <div class="votes">
-          <label class="vote"><input type="radio" name="vote" value="Bedtime Story App" required><span>Bedtime Story App</span></label>
-          <label class="vote"><input type="radio" name="vote" value="Whack-A-Mole Discount Game"><span>Whack-A-Mole Discount Game</span></label>
-          <label class="vote"><input type="radio" name="vote" value="AI Salon Booking Agent"><span>AI Salon Booking Agent</span></label>
-          <label class="vote"><input type="radio" name="vote" value="Self-Improving AI Agent"><span>Self-Improving AI Agent</span></label>
-          <label class="vote"><input type="radio" name="vote" value="Screenshot How-To Videos"><span>Screenshot How-To Videos</span></label>
-        </div>
-      </fieldset>
       <input type="hidden" name="marketing_optin" value="no">
       <label class="optin"><input id="marketingToggle" type="checkbox"><span>Yes, send me future Snack &amp; Learn sessions and updates from Smart 'R' Automation. Unsubscribe anytime.</span></label>
       <div>
@@ -498,7 +478,6 @@
   </div>
 </div></section>
 
-<!-- ABOUT -->
 <section data-section="about"><div class="wrap">
   <div class="about">
     <p class="kicker">Your host</p>
@@ -513,13 +492,11 @@
 </div></footer>
 
 <script>
-// Opt-in toggle keeps the hidden field in sync
 var tgl=document.getElementById('marketingToggle'),opt=document.querySelector('input[name="marketing_optin"]');
 tgl.addEventListener('change',function(){opt.value=tgl.checked?'yes':'no';});
 
-// Share buttons (work in the menu block and the "You're in" message)
 var SHARE_URL='https://smartrautomation.ca/snackandlearn';
-var SHARE_TEXT='Saw this and thought of you — free live session Tue Oct 27, 10am ET. Watching a real AI tool get built start to finish, plain English. Vote on what gets built:';
+var SHARE_TEXT='Saw this and thought of you: free live session Tue Nov 3, 10am ET. Watch screenshots turn into animated how-to videos with a voiceover, no filming:';
 function flash(el,msg){var box=el.closest('.share');var c=box&&box.querySelector('.copied');if(c){c.textContent=msg;setTimeout(function(){c.textContent='';},3000);}}
 function copyLink(el){var full=SHARE_TEXT+' '+SHARE_URL;
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(full).then(function(){flash(el,'Copied! Paste it anywhere.');},function(){prompt('Copy this:',full);});}
@@ -530,32 +507,31 @@ document.addEventListener('click',function(e){
   if(act==='sms'){el.setAttribute('href','sms:?&body='+encodeURIComponent(SHARE_TEXT+' '+SHARE_URL));return;}
   e.preventDefault();
   if(act==='native'){
-    if(navigator.share){navigator.share({title:'Snack & Learn — free live AI build',text:SHARE_TEXT,url:SHARE_URL}).catch(function(){});}
+    if(navigator.share){navigator.share({title:'Snack & Learn — free live session',text:SHARE_TEXT,url:SHARE_URL}).catch(function(){});}
     else{copyLink(el);}
   }
   if(act==='copy'){copyLink(el);}
 });
-var SHARE_BLOCK='<div class="share"><h3>Want your pick to win?</h3><p>Get a friend to vote too. Who do you know who keeps saying AI isn\'t for her?</p><div class="share-btns"><button type="button" class="sbtn primary" data-share="native">Share</button><a class="sbtn" data-share="sms" href="#">Text a friend</a><button type="button" class="sbtn" data-share="copy">Copy link</button></div><span class="copied" aria-live="polite"></span></div>';
+var SHARE_BLOCK='<div class="share"><h3>Bring a friend?</h3><p>Who do you know who keeps saying AI isn\'t for her?</p><div class="share-btns"><button type="button" class="sbtn primary" data-share="native">Share</button><a class="sbtn" data-share="sms" href="#">Text a friend</a><button type="button" class="sbtn" data-share="copy">Copy link</button></div><span class="copied" aria-live="polite"></span></div>';
 
-// Phone normalizer: (519) 555-1234 -> +15195551234
 function toE164(raw){if(!raw)return undefined;var d=String(raw).replace(/\D/g,'');
   if(d.length===10)return '+1'+d; if(d.length===11&&d.charAt(0)==='1')return '+'+d;
   if(String(raw).trim().charAt(0)==='+'&&d.length>=8)return '+'+d; return undefined;}
 
-// Submit once to the Snack & Learn Ep 2 sign-up flow (7285)
+// Submit once to the Snack & Learn Ep 3 sign-up flow (8613)
 var form=document.getElementById('signupForm'),btn=document.getElementById('submitBtn'),st=document.getElementById('formStatus');
 form.addEventListener('submit',function(e){
   e.preventDefault(); if(btn.disabled)return;
   btn.disabled=true; var t=btn.textContent; btn.textContent='Saving...'; st.style.display='none';
   var fd=new FormData(form),data={}; fd.forEach(function(v,k){data[k]=v;});
   var phone=toE164(fd.get('phone')); if(phone)data.phone=phone; else delete data.phone;
-  fetch('https://paymegpt.com/api/webhooks/flow/kx1rdl9a/8339eb65af50e94e0163ed668020ebbbfcdc390140ef5ee674ed3e1df77453ed',{
+  fetch('https://paymegpt.com/api/webhooks/flow/nrrzyb9r/971a31d2507e4009639c472a4ad45357fbc6b4744584a5943e3d12a82dd30320',{
     method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify({contactEmail:fd.get('email'),contactName:fd.get('name'),contactPhone:phone,data:data})
   }).then(function(r){
     if(!r.ok)throw new Error('fail');
     form.style.display='none';
-    st.innerHTML='You’re in! Check your email for your confirmation and your phone-wallet ticket. See you Tuesday.'+SHARE_BLOCK;
+    st.innerHTML='You’re in! Check your email for your confirmation and your phone-wallet ticket. See you Tuesday, November 3.'+SHARE_BLOCK;
     st.style.display='block';
   }).catch(function(){
     st.innerHTML='Sorry, something went wrong. Please try again in a moment.';
@@ -564,7 +540,6 @@ form.addEventListener('submit',function(e){
 });
 </script>
 
-<!-- Snacker chat bubble -->
 <script src="https://paymegpt.com/widget.js" data-widget="21788491" async></script>
 </body>
 </html>
