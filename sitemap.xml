@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/snackandlearn/</loc>
+    <lastmod>2026-10-28T23:50:37.575Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/apps/</loc>
+    <lastmod>2026-10-25T21:34:06.917Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/</loc>
+    <lastmod>2026-10-25T20:00:38.149Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://smartrautomation.ca/smartrbots/</loc>
+    <lastmod>2026-10-23T01:55:57.366Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/apps/social-post-generator/</loc>
     <lastmod>2026-10-22T16:06:25.869Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -41,28 +61,8 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://smartrautomation.ca/apps/</loc>
-    <lastmod>2026-10-22T15:55:38.985Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://smartrautomation.ca/demos/</loc>
     <lastmod>2026-10-22T15:55:31.261Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/</loc>
-    <lastmod>2026-10-22T15:55:21.024Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/smartrbots/</loc>
-    <lastmod>2026-10-22T12:43:55.376Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/snackandlearn/</loc>
-    <lastmod>2026-10-22T04:23:11.756Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
