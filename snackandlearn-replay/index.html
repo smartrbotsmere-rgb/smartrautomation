@@ -12,14 +12,14 @@
 
 
 <!-- SEO Meta Tags -->
-<title>Snack &amp; Learn Replay · Smart 'R' Automation</title>
-<meta name="description" content="Replay of the latest Snack &amp; Learn: a real AI tool built live, in plain English. For registered attendees." />
-<meta property="og:title" content="Snack &amp; Learn Replay · Smart 'R' Automation" />
-<meta property="og:description" content="Replay of the latest Snack &amp; Learn: a real AI tool built live, in plain English. For registered attendees." />
+<title>Snack &amp;amp; Learn Replays · Smart 'R' Automation</title>
+<meta name="description" content="Every Snack &amp; Learn replay in one place: real AI tools built live, in plain English. For registered attendees." />
+<meta property="og:title" content="Snack &amp;amp; Learn Replays · Smart 'R' Automation" />
+<meta property="og:description" content="Every Snack &amp; Learn replay in one place: real AI tools built live, in plain English. For registered attendees." />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Snack &amp; Learn Replay · Smart 'R' Automation" />
-<meta name="twitter:description" content="Replay of the latest Snack &amp; Learn: a real AI tool built live, in plain English. For registered attendees." />
+<meta name="twitter:title" content="Snack &amp;amp; Learn Replays · Smart 'R' Automation" />
+<meta name="twitter:description" content="Every Snack &amp; Learn replay in one place: real AI tools built live, in plain English. For registered attendees." />
 <!-- End SEO Meta Tags -->
 <meta name="sheet-data-url" content="https://paymegpt.com/api/public/landing-pages/8365/sheet-data">
 <script data-lp-token-hydrate>
@@ -254,7 +254,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var pBtn=document.getElementById('lp-pay-success-btn');
       if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -331,7 +331,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||'Thank you for your order.';
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var cBtn=document.getElementById('lp-cart-success-btn');
       if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -343,55 +343,43 @@
 </head>
 <body>
 
-<nav><div class="wrap">
-  <a class="brand" href="https://smartrautomation.ca/">Smart 'R' Automation</a>
-</div></nav>
+<nav><div class="wrap"><a class="brand" href="https://smartrautomation.ca/">Smart 'R' Automation</a></div></nav>
 
 <header class="hero" data-section="hero"><div class="wrap" style="position:relative;z-index:1">
-  <span class="eyebrow">Snack &amp; Learn · Episode 1 replay</span>
-  <h1 id="heroTitle">Your replay <em>is here</em></h1>
-  <p class="lede" id="heroLede">An AI phone receptionist for a local business, built live in plain English. Grab a snack and press play.</p>
+  <span class="eyebrow">Snack &amp; Learn · Replays</span>
+  <h1 id="heroTitle">Your replays <em>are here</em></h1>
+  <p class="lede" id="heroLede">Every Snack &amp; Learn in one place. Real AI tools, built live in plain English. Grab a snack and press play.</p>
 </div></header>
 
-<!-- STATE: checking -->
 <section id="stateChecking" data-section="checking"><div class="wrap">
-  <div class="card"><p class="sub">Getting your replay ready…</p></div>
+  <div class="card"><p class="sub">Getting your replays ready…</p></div>
 </div></section>
 
-<!-- STATE: registered -->
 <div id="stateRegistered" class="hidden">
-  <section data-section="video"><div class="wrap">
+  <section data-section="episodes"><div class="wrap">
     <p class="kicker" id="hello">Welcome back</p>
-    <h2>Watch the replay</h2>
-    <div class="video-box" id="videoBox"></div>
-    <span class="until">Available until Tuesday, October 27</span>
-    <div id="stampsWrap" class="hidden">
-      <h3 style="margin-top:28px;color:var(--navy);font-size:24px">Jump to</h3>
-      <ul class="stamps" id="stamps"></ul>
-    </div>
+    <h2>All episodes</h2>
+    <p class="sub">Newest first. Watch them anytime; they stay up.</p>
+    <div class="eps" id="eps"></div>
   </div></section>
 
   <section class="club" data-section="build-club"><div class="wrap">
     <p class="kicker" style="color:var(--accent)">What's next</p>
-    <h2>Want to build this yourself?</h2>
-    <p class="sub">That's what The Build Club with Mere is for. You don't need to code. You need to know how to ask, check what you got, and fix it. That's the skill, and it's the one that lasts.</p>
+    <h2>Want to build these yourself?</h2>
+    <p class="sub">That's what The Build Club with Mere is for. It's open now.</p>
     <ul>
-      <li>Two live builds a month, plus live Q&amp;As</li>
-      <li>Every build becomes a kit you can copy straight into your own account</li>
-      <li>Replays of everything</li>
+      <li>2 live build sessions a month, plus a couple of live Q&amp;As</li>
+      <li>A ready-made template with every build</li>
+      <li>Questions answered anytime, by a real person</li>
       <li>Your own Smart 'R' Automation account included</li>
     </ul>
-    <p class="price">Founding members: 10 seats, opening November 1</p>
-    <ul class="founding">
-      <li><strong>$97/month, locked in</strong> for as long as you stay a member</li>
-      <li><strong>A 30-minute "build it with me" call</strong>: we set up your first kit together</li>
-    </ul>
-    <p class="fine-light">Why only 10? Because I do every one of those calls myself.</p>
-    <div class="row-btns" style="margin-top:20px">
-      <button class="btn btn-light" id="foundingBtn" type="button">Put me on the founding list</button>
+    <p class="price">Founding members: $79/month, locked in</p>
+    <p class="fine-light" style="margin-top:8px">First 10 members only, then $97/month. Cancel anytime, no contracts. Founding members get a 1-on-1 onboarding call with me and a vote on the first 3 builds.</p>
+    <p class="fine-light" style="margin-top:8px">Come live when you can. Every session and Q&amp;A is recorded and waiting in the member site, so you're never behind.</p>
+    <div class="row-btns" style="margin-top:22px">
+      <a class="btn btn-light" href="https://smartrautomation.ca/build-club">See The Build Club</a>
       <a class="link-light" href="https://smartrautomation.ca/bookmere">Questions first? Book a quick call</a>
     </div>
-    <div class="status" id="foundingStatus"></div>
   </div></section>
 
   <section data-section="feedback"><div class="wrap">
@@ -400,6 +388,9 @@
       <h2>Tell me how it landed</h2>
       <p class="sub">I read every one, and your answers shape what I build next.</p>
       <form id="feedbackForm">
+        <label class="f">Which episode?
+          <select name="episode" id="epSelect" required></select>
+        </label>
         <label class="f">How would you rate it?
           <select name="rating" required>
             <option value="" selected disabled>Pick one</option>
@@ -426,27 +417,14 @@
   </div></section>
 </div>
 
-<!-- STATE: not registered -->
 <section id="stateNotRegistered" class="hidden" data-section="not-registered"><div class="wrap">
   <div class="card">
-    <h2>This replay is for Episode 1 sign-ups</h2>
+    <h2>The replays are for Snack &amp; Learn sign-ups</h2>
     <p class="sub">I couldn't find a sign-up for that email. If you registered with a different email, refresh the page and use that one.</p>
-    <p class="sub" style="margin-top:12px">Missed this one? Snack &amp; Learn is free, and the next episode is on its way.</p>
+    <p class="sub" style="margin-top:12px">Haven't signed up yet? It's free, and signing up for any session unlocks every replay.</p>
     <div class="row-btns" style="margin-top:22px">
-      <a class="btn" href="https://smartrautomation.ca/snackandlearn">Get the next episode</a>
+      <a class="btn" href="https://smartrautomation.ca/snackandlearn">Sign up free</a>
       <a href="https://smartrautomation.ca/bookmere" style="font-weight:600;color:var(--navy)">Or book a quick call with Mere</a>
-    </div>
-  </div>
-</div></section>
-
-<!-- STATE: ended -->
-<section id="stateEnded" class="hidden" data-section="ended"><div class="wrap">
-  <div class="card">
-    <h2>This replay has ended</h2>
-    <p class="sub">Episode 1's replay was up until October 27. The next Snack &amp; Learn is free, and founding memberships for The Build Club with Mere open November 1.</p>
-    <div class="row-btns" style="margin-top:22px">
-      <a class="btn" href="https://smartrautomation.ca/snackandlearn">Get the next episode</a>
-      <a href="https://smartrautomation.ca/bookmere" style="font-weight:600;color:var(--navy)">Book a quick call with Mere</a>
     </div>
   </div>
 </div></section>
@@ -458,94 +436,85 @@
 
 <script>
 (function(){
-  /* ===== Settings Claude updates after the session ===== */
-  var REPLAY_VIDEO_URL = '';            // Dropbox direct link (…&raw=1). Empty = "coming soon"
-  var TIMESTAMPS = [];                  // e.g. [['0:00','Welcome'],['5:00','What MCP is']]
-  var ENDS_AT = new Date('2026-10-28T04:00:00Z'); // end of Tue Oct 27, Eastern
+  /* ===== Episodes (Claude adds video links here; newest first). No expiry. ===== */
+  var EPISODES = [
+    { id:'Ep 3', title:'Screenshots → animated how-to videos', date:'Tuesday, November 3, 2026',
+      desc:'How I turn plain screenshots into a branded, step-by-step tutorial video, with a voiceover in my own voice. No filming.',
+      video:'', stamps:[] },
+    { id:'Ep 2', title:'Bedtime Story App', date:'Coming soon',
+      desc:'A personalized bedtime story app you could sell to parents, built start to finish.',
+      video:'', stamps:[] },
+    { id:'Ep 1', title:'AI phone receptionist', date:'Tuesday, October 20, 2026',
+      desc:'An AI that answers the phone for a local business, built live in plain English.',
+      video:'', stamps:[] }
+  ];
   var HOOK_WATCHED  = 'https://paymegpt.com/api/webhooks/flow/7214/2a4d2f29b4b1fdb8a94c13de13e1dfcc020b12b486eb672483793e2f9ded6fb2';
   var HOOK_FEEDBACK = 'https://paymegpt.com/api/webhooks/flow/7215/4dae5bdb96c811cf192c6326462633057949da7d3953b32e11e96c05b0592a26';
-  var HOOK_FOUNDING = 'https://paymegpt.com/api/webhooks/flow/7216/7f0ff1e51670d05451681ed2a697da6729ba65ec07f38e633f4b8b89bb962020';
-  /* ===================================================== */
+  /* ========================================================================== */
 
   function $(id){return document.getElementById(id);}
   function show(id){$('stateChecking').classList.add('hidden');$(id).classList.remove('hidden');}
-  var me = {name:'', email:''};
-
-  function post(url, extra){
+  var me={name:'',email:''};
+  function post(url,extra){
     return fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({contactEmail:me.email,contactName:me.name,data:extra||{}})});
   }
 
-  if (new Date() > ENDS_AT){
-    $('heroTitle').innerHTML='Replay <em>has ended</em>';
-    $('heroLede').textContent='Thanks for being part of Episode 1.';
-    show('stateEnded'); return;
+  function renderEpisodes(){
+    var wrap=$('eps'), sel=$('epSelect');
+    sel.innerHTML='<option value="" selected disabled>Pick one</option>';
+    EPISODES.forEach(function(ep){
+      var card=document.createElement('div'); card.className='card ep';
+      card.innerHTML='<span class="meta"></span><h3></h3><p class="desc"></p><div class="video-box"></div>';
+      card.querySelector('.meta').textContent=ep.id+' · '+ep.date;
+      card.querySelector('h3').textContent=ep.title;
+      card.querySelector('.desc').textContent=ep.desc;
+      var box=card.querySelector('.video-box');
+      if(ep.video){
+        box.innerHTML='<video controls playsinline preload="metadata"></video>';
+        var v=box.querySelector('video'); v.src=ep.video;
+        var logged=false;
+        v.addEventListener('play',function(){
+          if(logged) return; logged=true;
+          var key='snackWatched_'+ep.id, done=false;
+          try{done=sessionStorage.getItem(key)==='1';}catch(e){}
+          if(!done){ post(HOOK_WATCHED,{episode:ep.id}).catch(function(){}); try{sessionStorage.setItem(key,'1');}catch(e){} }
+        });
+        var o=document.createElement('option'); o.value=ep.id; o.textContent=ep.id+' · '+ep.title; sel.appendChild(o);
+      } else {
+        box.innerHTML='<div class="soon"><h4>Replay coming soon</h4><p>Check back after the session. It will appear right here.</p></div>';
+      }
+      if(ep.stamps.length){
+        var ul=document.createElement('ul'); ul.className='stamps';
+        ep.stamps.forEach(function(t){var li=document.createElement('li');li.innerHTML='<b></b><span></span>';
+          li.querySelector('b').textContent=t[0];li.querySelector('span').textContent=t[1];ul.appendChild(li);});
+        card.appendChild(ul);
+      }
+      wrap.appendChild(card);
+    });
+    if(sel.options.length===1){ $('feedbackForm').closest('section').classList.add('hidden'); }
   }
 
   function notRegistered(){
-    $('heroTitle').innerHTML='Snack <em>&amp;</em> Learn replay';
-    $('heroLede').textContent='The replay is just for people who signed up for Episode 1.';
+    $('heroTitle').innerHTML='Snack <em>&amp;</em> Learn replays';
+    $('heroLede').textContent='The replays are just for people who signed up for a Snack & Learn session.';
     show('stateNotRegistered');
   }
-
-  function renderVideo(){
-    var box=$('videoBox');
-    if (REPLAY_VIDEO_URL){
-      box.innerHTML='<video controls playsinline preload="metadata"></video>';
-      box.querySelector('video').src=REPLAY_VIDEO_URL;
-    } else {
-      box.innerHTML='<div class="soon"><h3>The replay is being uploaded</h3><p>Check back soon. You\'ll also get an email the moment it\'s ready.</p></div>';
-    }
-    if (TIMESTAMPS.length){
-      var ul=$('stamps');
-      TIMESTAMPS.forEach(function(t){
-        var li=document.createElement('li');
-        li.innerHTML='<b></b><span></span>';
-        li.querySelector('b').textContent=t[0];
-        li.querySelector('span').textContent=t[1];
-        ul.appendChild(li);
-      });
-      $('stampsWrap').classList.remove('hidden');
-    }
-  }
-
   function registered(row){
     me.name=row.Name||''; me.email=row.Email||'';
-    if (me.name) $('hello').textContent='Welcome back, '+me.name.split(' ')[0];
-    renderVideo();
-    show('stateRegistered');
-    // Tell Mere once per browser session (only when the video is actually up)
-    if (REPLAY_VIDEO_URL){
-      var already=false;
-      try{ already=sessionStorage.getItem('snackReplayLogged')==='1'; }catch(e){}
-      if(!already){
-        post(HOOK_WATCHED).catch(function(){});
-        try{ sessionStorage.setItem('snackReplayLogged','1'); }catch(e){}
-      }
-    }
+    if(me.name) $('hello').textContent='Welcome back, '+me.name.split(' ')[0];
+    renderEpisodes(); show('stateRegistered');
   }
 
   var meta=document.querySelector('meta[name="sheet-data-url"]');
   if(!meta||!meta.content){ notRegistered(); }
-  else {
+  else{
     fetch(meta.content).then(function(r){return r.json();}).then(function(d){
       var rows=(d&&d.data)||(Array.isArray(d)?d:[]);
       if(rows.length){ registered(rows[rows.length-1]); } else { notRegistered(); }
     }).catch(notRegistered);
   }
 
-  // Founding list (one tap, identity from the verified sign-up row)
-  $('foundingBtn').addEventListener('click',function(){
-    var b=this; if(b.disabled) return; b.disabled=true; b.textContent='Adding you...';
-    post(HOOK_FOUNDING,{source:'snack-ep1-replay'}).then(function(r){
-      if(!r.ok) throw new Error();
-      b.textContent='You\'re on the list ✓';
-      var s=$('foundingStatus'); s.textContent='Done. You\'ll hear from me before founding memberships open on November 1.'; s.style.display='block';
-    }).catch(function(){ b.disabled=false; b.textContent='Put me on the founding list';
-      var s=$('foundingStatus'); s.textContent='Sorry, that didn\'t go through. Please try again.'; s.style.display='block'; });
-  });
-
-  // Feedback
   var f=$('feedbackForm');
   f.addEventListener('submit',function(e){
     e.preventDefault(); var b=$('feedbackBtn'); if(b.disabled) return;
