@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mvufn3ak-v904u";
+  var SITEK="";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  function siteTok(){try{return SITEK?localStorage.getItem(SITEK):null;}catch(e){return null;}}
+  var u=new URL(location.href);var found=null;var changed=false;
+  var PINP=true;
+  if(!PINP){try{localStorage.removeItem('lp_pin_'+slug);if(SITEK)localStorage.removeItem(SITEK);}catch(e){}}
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{if(PINP||p!=='pin_access_token'){localStorage.setItem(map[p]+slug,v);if(SITEK&&p==='pin_access_token')localStorage.setItem(SITEK,v);}}catch(e){}if(p==='pin_access_token'){try{sessionStorage.setItem('lp_fresh_'+slug,'1');}catch(e){}}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script><script data-lp-sheet-read-gate>
+(function(){
+  if(window.__lpSheetReadGate)return;
+  window.__lpSheetReadGate=true;
+  var slug="lp-mvufn3ak-v904u", id="8709", site="";
+  var prefixes=['lp_pw_','lp_pin_','lp_al_','lp_paid_'], resetting=false;
+  function token(){try{
+    var t=sessionStorage.getItem('lp_access_'+slug);
+    for(var i=0;!t&&i<prefixes.length;i++)t=localStorage.getItem(prefixes[i]+slug);
+    return t||(site&&localStorage.getItem(site))||'';
+  }catch(e){return '';}}
+  function sheet(input,init){try{
+    var method=(init&&init.method)||(input&&input.method)||'GET';
+    if(String(method).toUpperCase()!=='GET')return false;
+    var u=new URL(typeof input==='string'||input instanceof URL?String(input):input.url,location.href);
+    return u.pathname==='/api/public/landing-pages/'+id+'/sheet-data'||
+      u.pathname==='/api/public/landing-pages/'+slug+'/sheet-data';
+  }catch(e){return false;}}
+  function wait(signal){
+    return new Promise(function(resolve,reject){
+      var timer;
+      function cleanup(){clearTimeout(timer);if(signal)signal.removeEventListener('abort',abort);}
+      function abort(){cleanup();reject(new DOMException('Request aborted','AbortError'));}
+      function tick(){if(signal&&signal.aborted)return abort();if(token()){cleanup();resolve();}else timer=setTimeout(tick,200);}
+      if(signal)signal.addEventListener('abort',abort,{once:true});
+      tick();
+    });
+  }
+  function reset(){
+    if(resetting)return;resetting=true;
+    try{
+      sessionStorage.removeItem('lp_access_'+slug);sessionStorage.removeItem('lp_fresh_'+slug);
+      prefixes.forEach(function(p){localStorage.removeItem(p+slug);});
+      if(site)localStorage.removeItem(site);
+      var u=new URL(location.href);
+      ['access_token','pin_access_token','allowlist_access_token','paywall_access_token'].forEach(function(p){u.searchParams.delete(p);});
+      location.replace(u.toString());
+    }catch(e){location.reload();}
+  }
+  if(window.fetch){
+    var send=window.fetch;
+    window.fetch=function(input,init){
+      if(!sheet(input,init))return send.call(this,input,init);
+      // The existing hydrator understands strings and Request objects.
+      if(input instanceof URL)input=input.href;
+      var signal=(init&&init.signal)||(input&&input.signal), attemptedToken=token();
+      return send.call(this,input,init).then(function(response){
+        if(response.status!==401)return response;
+        if(attemptedToken){reset();return response;}
+        return wait(signal).then(function(){
+          return send.call(window,input,init);
+        }).then(function(retry){if(retry.status===401)reset();return retry;});
+      });
+    };
+  }
+  if(window.XMLHttpRequest){
+    var open=XMLHttpRequest.prototype.open,sendX=XMLHttpRequest.prototype.send;
+    XMLHttpRequest.prototype.open=function(method,url,async){
+      this.__lpProtectedSheet=async!==false&&sheet(url,{method:method});
+      return open.apply(this,arguments);
+    };
+    XMLHttpRequest.prototype.send=function(body){
+      if(!this.__lpProtectedSheet)return sendX.apply(this,arguments);
+      var xhr=this, controller=new AbortController();
+      xhr.addEventListener('abort',function(){controller.abort();},{once:true});
+      xhr.addEventListener('load',function(){if(xhr.status===401)reset();},{once:true});
+      wait(controller.signal).then(function(){sendX.call(xhr,body);}).catch(function(){});
+    };
+  }
+})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+
+<!-- SEO Meta Tags -->
+<title>Ridge &amp; Fade | Staff Redeem (Demo)</title>
+<meta name="description" content="Minimal dark navy staff lookup tool to search linked sheet rows by code, name, or email and mark gifts as redeemed." />
+<meta property="og:title" content="Ridge &amp; Fade | Staff Redeem (Demo)" />
+<meta property="og:description" content="Minimal dark navy staff lookup tool to search linked sheet rows by code, name, or email and mark gifts as redeemed." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Ridge &amp; Fade | Staff Redeem (Demo)" />
+<meta name="twitter:description" content="Minimal dark navy staff lookup tool to search linked sheet rows by code, name, or email and mark gifts as redeemed." />
+<!-- End SEO Meta Tags -->
+<meta name="sheet-data-url" content="https://paymegpt.com/api/public/landing-pages/8709/sheet-data">
+<meta name="sheet-rows-url" content="https://paymegpt.com/api/public/landing-pages/8709/sheet-rows">
+<meta name="sheet-writes-enabled" content="true">
+<meta name="sheet-allow-create" content="false">
+<meta name="sheet-allow-delete" content="false">
+<meta name="sheet-writable-columns" content="Redeemed,Redeemed At">
+<style data-gate>body{visibility:hidden}</style>
+<script data-gate>
+(function(){
+  var slug="lp-mvufn3ak-v904u", apiBase="https://paymegpt.com";
+  document.addEventListener('DOMContentLoaded',function(){
+    document.body.style.visibility='visible';
+    var saved;try{saved=sessionStorage.getItem('lp_access_'+slug)||localStorage.getItem('lp_pw_'+slug);}catch(e){}
+    if(saved)return;
+    var gate=document.createElement('div');gate.id='password-gate';
+    gate.style.cssText='position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;background:#f3f4f6;padding:20px;font-family:system-ui;color:#111827';
+    gate.innerHTML='<form id="pw-form" style="width:100%;max-width:380px;background:white;padding:28px;border-radius:12px;box-shadow:0 12px 40px #0002"><h1 id="pw-title" style="font-size:24px"></h1><p id="pw-description"></p><label for="pw-input">Page password</label><input id="pw-input" type="password" autocomplete="current-password" required style="display:block;box-sizing:border-box;width:100%;padding:12px;margin:12px 0;border:1px solid #aaa;border-radius:6px"><p id="pw-error" role="alert" style="color:#b91c1c"></p><button id="pw-btn" type="submit" style="width:100%;padding:12px;border:0;border-radius:6px;background:#2563eb;color:white"></button></form>';
+    document.body.appendChild(gate);
+    document.getElementById('pw-title').textContent="Password required";
+    document.getElementById('pw-description').textContent="Enter the page password to view the linked spreadsheet data.";
+    var button=document.getElementById('pw-btn'), input=document.getElementById('pw-input'), error=document.getElementById('pw-error');
+    var label="Unlock page";button.textContent=label;
+    input.placeholder="Enter password";
+    var color="#2563eb";
+    if(/^#[0-9a-f]{3,8}$/i.test(color))button.style.backgroundColor=color;
+    document.getElementById('pw-form').addEventListener('submit',function(e){
+      e.preventDefault();button.disabled=true;error.textContent='';button.textContent='Verifying…';
+      fetch(apiBase+'/api/landing-pages/public/'+encodeURIComponent(slug)+'/verify-password',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:input.value})})
+      .then(function(r){return r.json();}).then(function(result){
+        if(!result.success||!result.accessToken)throw new Error(result.error||'Unable to verify password.');
+        sessionStorage.setItem('lp_access_'+slug,result.accessToken);localStorage.setItem('lp_pw_'+slug,result.accessToken);
+        gate.remove();
+      }).catch(function(e){error.textContent=e.message||'Unable to verify password.';input.focus();})
+      .finally(function(){button.disabled=false;button.textContent=label;});
+    });
+    input.focus();
+  });
+})();
+</script>
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=8709');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='ELDcAib';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='ELDcAib';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="demo">DEMO staff screen. Ridge &amp; Fade is a fictional barbershop.</div>
+<div class="wrap">
+ <header>
+  <h1>Black Friday <span>redeem</span></h1>
+  <p class="sub">Scan the customer's fortune card with your phone camera, or search below.</p>
+  <input id="q" type="search" placeholder="Code, name or email" autocomplete="off">
+ </header>
+ <p id="status">Loading…</p>
+ <div id="list" class="res"></div>
+
+ <div id="detail" class="big hidden">
+  <button class="back" type="button" id="back">← Back to search</button>
+  <div class="who" id="dName"></div>
+  <div class="sub" id="dFor"></div>
+  <div class="total"><small>Load onto gift card</small><div id="dTotal"></div><small id="dSplit"></small></div>
+  <div class="line"><span>Bonus</span><span id="dBonus"></span></div>
+  <div class="line"><span>Code</span><span id="dCode"></span></div>
+  <div class="line"><span>Email</span><span id="dEmail"></span></div>
+  <div id="dUsed" class="usedbox hidden"></div>
+  <button class="btn" id="redeem" type="button">Take $50 payment, then tap to redeem</button>
+  <div id="dDone" class="done hidden">Done. Gift card and Cut Card (5 cuts, 1 free) are on their way to the customer's email and phone.</div>
+  <p class="steps">Redeeming marks the code as used, issues the gift card already loaded with the total above, and adds a Cut Card loyalty card.</p>
+ </div>
+</div>
+
+<script>
+(function(){
+ var HOOK='https://paymegpt.com/api/webhooks/flow/8660/6dd17e81d949231d0d2acbda251b15375b77ec9b3226924f3cb53998be0177eb';
+ var dataUrl=(document.querySelector('meta[name="sheet-data-url"]')||{}).content;
+ var rowsUrl=(document.querySelector('meta[name="sheet-rows-url"]')||{}).content;
+ var rows=[],cur=null;
+ function $(i){return document.getElementById(i);}
+ function token(){
+  var stores=[];try{stores.push(localStorage);}catch(e){}try{stores.push(sessionStorage);}catch(e){}
+  for(var s=0;s<stores.length;s++){try{for(var i=0;i<stores[s].length;i++){var k=stores[s].key(i);if(/^lp_(pw|pin|al|access)_/.test(k))return stores[s].getItem(k);}}catch(e){}}
+  return '';
+ }
+ function hdrs(){var t=token();var h={'Content-Type':'application/json'};if(t)h['X-Landing-Page-Token']=t;return h;}
+ function used(r){return String(r.Redeemed||'').toLowerCase()==='yes';}
+ function load(){
+  if(!dataUrl){$('status').textContent='Sheet link missing.';return Promise.resolve();}
+  return fetch(dataUrl,{headers:hdrs(),cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+   rows=((d&&d.data)||[]).filter(function(r){return r.Code;});
+   $('status').textContent=rows.length+' fortune cards on file.';
+  }).catch(function(){$('status').textContent='Could not load the list. Refresh the page.';});
+ }
+ function list(){
+  var q=$('q').value.trim().toLowerCase();
+  if(!q){$('list').innerHTML='';return;}
+  var m=rows.filter(function(r){return ['Code','Name','Email','Gift Name'].some(function(k){return String(r[k]||'').toLowerCase().indexOf(q)>-1;});});
+  $('list').innerHTML='';
+  if(!m.length){$('list').innerHTML='<p class="sub">No match. Check the code on their card.</p>';return;}
+  m.forEach(function(r){
+   var d=document.createElement('div');d.className='row';
+   d.innerHTML='<div><b></b><small></small></div><span class="tag"></span>';
+   d.querySelector('b').textContent=r.Name||'';
+   d.querySelector('small').textContent=(r.Code||'')+' · '+(r.Bonus||'');
+   var t=d.querySelector('.tag');if(used(r)){t.textContent='Used';t.classList.add('used');}else{t.textContent='$'+(r['Gift Card Total']||'')+' ready';}
+   d.onclick=function(){open(r);};
+   $('list').appendChild(d);
+  });
+ }
+ function open(r){
+  cur=r;$('list').innerHTML='';$('detail').classList.remove('hidden');$('dDone').classList.add('hidden');
+  $('dName').textContent=r.Name||'';
+  $('dFor').textContent=(r.For==='gift'&&r['Gift Name'])?'Bought as a gift for '+r['Gift Name']:'Playing for themselves';
+  var tot=Number(r['Gift Card Total']||0);
+  $('dTotal').textContent=tot?'$'+tot:'?';
+  $('dSplit').textContent=tot?'$50 paid + $'+(tot-50)+' bonus':'';
+  $('dBonus').textContent=r.Bonus||'';$('dCode').textContent=r.Code||'';$('dEmail').textContent=r.Email||'';
+  if(used(r)){$('dUsed').textContent='Already redeemed'+(r['Redeemed At']?' on '+new Date(r['Redeemed At']).toLocaleString():'')+'. Do not issue again.';$('dUsed').classList.remove('hidden');$('redeem').classList.add('hidden');}
+  else{$('dUsed').classList.add('hidden');$('redeem').classList.remove('hidden');$('redeem').disabled=false;}
+ }
+ $('back').onclick=function(){$('detail').classList.add('hidden');cur=null;list();};
+ $('q').addEventListener('input',function(){$('detail').classList.add('hidden');list();});
+ $('redeem').onclick=function(){
+  if(!cur)return;
+  if(!confirm('Did they pay $50? Redeem and load $'+cur['Gift Card Total']+' for '+cur.Name+'?'))return;
+  var b=this;b.disabled=true;b.textContent='Redeeming…';
+  var now=new Date().toISOString();
+  var w=rowsUrl?fetch(rowsUrl+'/'+cur._rowNumber,{method:'PATCH',headers:hdrs(),body:JSON.stringify({'Redeemed':'Yes','Redeemed At':now})}).catch(function(){}):Promise.resolve();
+  var f=fetch(HOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contactEmail:cur.Email,contactName:cur.Name,data:{code:cur.Code,staff_redeem:'yes'}})});
+  Promise.all([w,f]).then(function(){cur.Redeemed='Yes';cur['Redeemed At']=now;b.classList.add('hidden');b.textContent='Take $50 payment, then tap to redeem';$('dDone').classList.remove('hidden');})
+   .catch(function(){b.disabled=false;b.textContent='Try again';alert('That didn\'t go through. Check the connection and try again.');});
+ };
+ load().then(function(){
+  var s=new URLSearchParams(location.search).get('serial');
+  if(s){var r=rows.filter(function(x){return x.Serial===s;})[0];if(r)open(r);else $('status').textContent='That card wasn\'t found. Search by code instead.';}
+ });
+})();
+</script>
+</body>
+</html>
