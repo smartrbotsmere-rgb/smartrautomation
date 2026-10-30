@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/demos/ridge-and-fade/calculator/</loc>
+    <lastmod>2026-10-30T03:09:22.940Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/demos/ridge-and-fade/</loc>
     <lastmod>2026-10-30T03:09:15.523Z</lastmod>
     <changefreq>weekly</changefreq>
