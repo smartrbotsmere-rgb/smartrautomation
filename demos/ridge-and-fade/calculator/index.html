@@ -11,13 +11,13 @@
 
 <!-- SEO Meta Tags -->
 <title>Ridge &amp; Fade | Black Friday Math (Demo)</title>
-<meta name="description" content="Demo calculator: what a Halloween scratch card plus Black Friday gift card bonus brings into a barbershop." />
+<meta name="description" content="Demo calculator: what a Halloween scratch card plus a Black Friday gift card bonus brings into a barbershop." />
 <meta property="og:title" content="Ridge &amp; Fade | Black Friday Math (Demo)" />
-<meta property="og:description" content="Demo calculator: what a Halloween scratch card plus Black Friday gift card bonus brings into a barbershop." />
+<meta property="og:description" content="Demo calculator: what a Halloween scratch card plus a Black Friday gift card bonus brings into a barbershop." />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Ridge &amp; Fade | Black Friday Math (Demo)" />
-<meta name="twitter:description" content="Demo calculator: what a Halloween scratch card plus Black Friday gift card bonus brings into a barbershop." />
+<meta name="twitter:description" content="Demo calculator: what a Halloween scratch card plus a Black Friday gift card bonus brings into a barbershop." />
 <!-- End SEO Meta Tags -->
 <script data-lp-token-hydrate>
 (function(){try{
@@ -310,34 +310,46 @@
 <body>
 <div class="demo">DEMO by Smart 'R' Automation. Ridge &amp; Fade is a fictional barbershop and these are example numbers.</div>
 <header><div class="wrap">
- <h1>What the <span>scratch card</span> brings in</h1>
- <p class="lede">Halloween scratch card → Black Friday $50 gift card with a bonus on top. Move the sliders to see the money that lands on Black Friday, what the bonuses cost, and what comes back in January.</p>
+ <h1>What one <span>Black Friday</span> could bring in</h1>
+ <p class="lede">A Halloween scratch card gets people excited in October. On Black Friday they come in and buy a $50 gift card with their bonus on top. Move the sliders to see the sales for the day.</p>
 </div></header>
 
 <main class="wrap"><div class="grid">
  <div class="card">
   <h2>Your numbers</h2>
   <div class="ctl"><label>People who play <b id="vPlays"></b></label><input type="range" id="plays" min="50" max="1500" step="10" value="300"><small>Scratch cards played in October and November</small></div>
-  <div class="ctl"><label>Players who buy on Black Friday <b id="vRate"></b></label><input type="range" id="rate" min="5" max="80" step="1" value="35"><small>% who come in and buy the $50 gift card</small></div>
-  <div class="ctl"><label>Extra gift cards (no bonus) <b id="vExtra"></b></label><input type="range" id="extra" min="0" max="200" step="1" value="25"><small>Second cards and walk-ins buying at regular price</small></div>
-  <div class="ctl"><label>Never spent ("breakage") <b id="vBreak"></b></label><input type="range" id="brk" min="0" max="25" step="1" value="8"><small>% of gift card dollars that never get used</small></div>
+  <div class="ctl"><label>Players who come in on Black Friday <b id="vRate"></b></label><input type="range" id="rate" min="5" max="80" step="1" value="35"><small>% who buy the $50 gift card</small></div>
+  <div class="ctl"><label>Extra gift cards that day <b id="vExtra"></b></label><input type="range" id="extra" min="0" max="200" step="1" value="25"><small>Second cards and walk-ins at regular price</small></div>
+  <div class="ctl"><label>Product sales while they're in <b id="vProd"></b></label><input type="range" id="prod" min="0" max="60" step="1" value="12"><small>Average extra spend per visit (beard oil, combs, styling)</small></div>
   <div class="ctl"><label>Brand-new customers <b id="vNew"></b></label><input type="range" id="newc" min="0" max="100" step="1" value="45"><small>% of buyers who've never been to the shop</small></div>
-  <div class="ctl"><label>Their yearly spend after <b id="vLtv"></b></label><input type="range" id="ltv" min="0" max="800" step="10" value="300"><small>What a new regular spends in a year (haircuts, products)</small></div>
+  <div class="ctl"><label>A new regular's yearly spend <b id="vLtv"></b></label><input type="range" id="ltv" min="0" max="800" step="10" value="300"><small>Haircuts and products over a year</small></div>
  </div>
  <div class="card">
   <h2>The results</h2>
-  <div class="big"><small>Cash in on Black Friday</small><div id="rCash"></div></div>
+  <div class="big"><small>Black Friday sales</small><div id="rDay"></div><p>Money in the till that day, from a promo that started with nothing.</p></div>
   <div class="row"><span>Gift cards sold</span><span id="rCards"></span></div>
-  <div class="row"><span>Bonus dollars given out</span><span id="rBonus"></span></div>
-  <div class="row"><span>Bonus cost as % of cash in</span><span id="rPct"></span></div>
-  <div class="row"><span>Likely never spent</span><span id="rBrk"></span></div>
-  <div class="row"><span>Brand-new customers</span><span id="rNew"></span></div>
-  <div class="row"><span>Their first-year value</span><span id="rLtv"></span></div>
-  <div class="row"><span>Cost per new customer</span><span id="rCpc"></span></div>
-  <p class="note">Bonus math uses the real prize ladder: 3 × $50, 5 × $35, 10 × $25, 15 × $10, then $5 for everyone else, scaled by how many players actually buy. Bonus dollars are mostly spent on haircuts and products later, so the true cost is the shop's cost of those services, not the full face value.</p>
+  <div class="row"><span>Gift card sales</span><span id="rCash"></span></div>
+  <div class="row"><span>Product sales that day</span><span id="rProd"></span></div>
+  <div class="row"><span>Bonus credit given</span><span id="rBonus"></span></div>
+  <div class="row"><span>Brand-new customers through the door</span><span id="rNew"></span></div>
+  <div class="row"><span>What they're worth in year one</span><span id="rLtv"></span></div>
+  <p class="note">Bonus credit isn't money out of the till. It's spent later on haircuts, which brings people back into the chair, often with a friend. The prize ladder is real: 3 × $50, 5 × $35, 10 × $25, 15 × $10, then $5 for everyone else.</p>
   <a class="btn" href="https://smartrautomation.ca/demos/ridge-and-fade/">Try the scratch card</a>
  </div>
 </div></main>
+
+<section class="more"><div class="wrap">
+ <h2>More possibilities</h2>
+ <p class="sub">This demo shows the in-shop version. For a real shop, these can be added too.</p>
+ <div class="ideas">
+  <div class="idea"><span class="tag">Sell online</span><h3>Buy the gift card online</h3><p>Customers buy and pay for their gift card from their phone on Black Friday, bonus included. Sales don't depend on who walks in.</p></div>
+  <div class="idea"><span class="tag">Book the first cut</span><h3>Booking link with the card</h3><p>The gift card email comes with a booking link, so new customers book their first cut right away instead of forgetting.</p></div>
+  <div class="idea"><span class="tag">Bring them back</span><h3>Free-cut loyalty card</h3><p>Every gift card buyer also gets a Cut Card: 5 cuts, the next one's free. (Included in this demo.)</p></div>
+  <div class="idea"><span class="tag">January nudge</span><h3>Balance reminders</h3><p>In the new year, anyone with money left on their card gets a lock-screen reminder to book. (Included in this demo.)</p></div>
+  <div class="idea"><span class="tag">Easy at the counter</span><h3>One-tap staff screen</h3><p>Staff scan the customer's card with a phone camera, see the exact amount, and tap once to issue the gift card. (Included in this demo.)</p></div>
+  <div class="idea"><span class="tag">Any holiday</span><h3>Reuse it all year</h3><p>Swap the artwork and prizes for Valentine's, Father's Day or back-to-school. Same system, new season.</p></div>
+ </div>
+</div></section>
 
 <footer><div class="wrap">Demo built by <a href="https://smartrautomation.ca">Smart 'R' Automation</a>. Example numbers only, not a forecast.</div></footer>
 
@@ -346,25 +358,20 @@
  function $(i){return document.getElementById(i);}
  var money=new Intl.NumberFormat('en-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0});
  function calc(){
-  var plays=+$('plays').value, rate=+$('rate').value/100, extra=+$('extra').value, brk=+$('brk').value/100, newc=+$('newc').value/100, ltv=+$('ltv').value;
-  var winners=Math.min(plays,33);
+  var plays=+$('plays').value, rate=+$('rate').value/100, extra=+$('extra').value, prod=+$('prod').value, newc=+$('newc').value/100, ltv=+$('ltv').value;
   var topBonus=0, ladder=[[3,50],[5,35],[10,25],[15,10]], left=plays;
   ladder.forEach(function(t){var n=Math.min(t[0],left);topBonus+=n*t[1];left-=n;});
   var bonus=Math.round(rate*(topBonus+left*5));
-  var buyers=Math.round(plays*rate), cards=buyers+extra, cash=cards*50;
+  var buyers=Math.round(plays*rate), cards=buyers+extra, cash=cards*50, prodSales=cards*prod;
   var newCust=Math.round(cards*newc);
   $('vPlays').textContent=plays; $('vRate').textContent=Math.round(rate*100)+'%'; $('vExtra').textContent=extra;
-  $('vBreak').textContent=Math.round(brk*100)+'%'; $('vNew').textContent=Math.round(newc*100)+'%'; $('vLtv').textContent=money.format(ltv);
-  $('rCash').textContent=money.format(cash);
-  $('rCards').textContent=cards;
+  $('vProd').textContent=money.format(prod); $('vNew').textContent=Math.round(newc*100)+'%'; $('vLtv').textContent=money.format(ltv);
+  $('rDay').textContent=money.format(cash+prodSales);
+  $('rCards').textContent=cards; $('rCash').textContent=money.format(cash); $('rProd').textContent=money.format(prodSales);
   $('rBonus').textContent=money.format(bonus);
-  $('rPct').textContent=cash?Math.round(bonus/cash*100)+'%':'0%';
-  $('rBrk').textContent=money.format(Math.round((cash+bonus)*brk));
-  $('rNew').textContent=newCust;
-  $('rLtv').textContent=money.format(newCust*ltv);
-  $('rCpc').textContent=newCust?money.format(Math.round(bonus/newCust)):'n/a';
+  $('rNew').textContent=newCust; $('rLtv').textContent=money.format(newCust*ltv);
  }
- ['plays','rate','extra','brk','newc','ltv'].forEach(function(i){$(i).addEventListener('input',calc);});
+ ['plays','rate','extra','prod','newc','ltv'].forEach(function(i){$(i).addEventListener('input',calc);});
  calc();
 })();
 </script>
