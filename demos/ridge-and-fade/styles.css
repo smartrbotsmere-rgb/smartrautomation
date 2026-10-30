@@ -27,7 +27,9 @@ h2{font-size:clamp(2.4rem,6vw,3.4rem);text-align:center;margin-bottom:10px}
 .pr{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:14px 0;gap:12px}
 .pr:last-child{border:0}
 .pr .amt{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--blue);line-height:1;white-space:nowrap}
-.pr.gold .amt{color:var(--red)}
+.pr.gold .amt{color:#f5c542;text-shadow:0 0 18px rgba(245,197,66,.45)}
+.pr.gold{background:linear-gradient(90deg,rgba(245,197,66,.16),rgba(245,197,66,0));margin:0 -22px;padding:14px 22px;border-radius:14px 14px 0 0}
+.pr.gold small{color:#f5d77a}
 .pr small{color:var(--muted);display:block}
 .why{max-width:620px;margin:0 auto;background:#0e1529;border:1px solid var(--line);border-radius:20px;padding:26px}
 .why h3{font-size:1.9rem;margin-bottom:10px}
