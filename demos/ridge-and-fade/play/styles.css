@@ -1,0 +1,43 @@
+:root{--bg:#0a0e1c;--panel:#121a33;--line:rgba(77,163,255,.25);--blue:#4da3ff;--red:#e63946;--white:#ffffff;--muted:rgba(255,255,255,.72)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--white);font-family:'Instrument Sans',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:.03em;line-height:1;font-weight:400}
+.wrap{max-width:620px;margin:0 auto;padding:0 16px}
+.demo{background:var(--red);text-align:center;font-size:.85rem;padding:8px 16px}
+.top{padding:28px 0 8px;text-align:center}
+.top h1{font-size:clamp(2.4rem,8vw,3.4rem)}
+.top h1 span{color:var(--blue)}
+.top p{color:var(--muted);margin-top:8px}
+section{padding:20px 0 50px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px}
+h2{font-size:2.2rem;margin-bottom:8px;text-align:center}
+.sub{color:var(--muted);text-align:center;margin-bottom:18px}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.choice button{padding:18px 10px;border-radius:14px;border:1px solid var(--line);background:#0e1529;color:var(--white);font:inherit;font-weight:600;cursor:pointer}
+.choice button.on{background:var(--blue);color:var(--bg);border-color:var(--blue)}
+label{display:block;font-weight:600;font-size:.92rem;margin:12px 0 6px}
+input{width:100%;padding:14px;border-radius:12px;border:1px solid var(--line);background:#0e1529;color:var(--white);font:inherit;font-size:16px}
+.btn{display:block;width:100%;margin-top:18px;padding:16px;border:0;border-radius:14px;background:var(--red);color:var(--white);font:inherit;font-weight:600;font-size:1.05rem;cursor:pointer;text-align:center;text-decoration:none}
+.btn.ghost{background:transparent;border:1px solid var(--line)}
+.err{color:#ff8a93;font-size:.9rem;margin-top:8px;min-height:1em}
+.hint{color:var(--muted);font-size:.85rem;margin-top:8px;text-align:center}
+.wait{text-align:center;padding:34px 22px}
+.ball{width:90px;height:90px;border-radius:50%;margin:0 auto 18px;background:radial-gradient(circle at 35% 35%,#ffffff,#4da3ff 45%,#0b2a6b 80%);box-shadow:0 0 40px rgba(77,163,255,.5);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.08);opacity:1}}
+.scratch{position:relative;height:240px;border-radius:16px;overflow:hidden;touch-action:none;background:#ffffff;color:var(--bg);user-select:none}
+.prize{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px}
+.prize small{letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;color:var(--red);font-weight:600}
+.prize b{font-family:'Bebas Neue',sans-serif;font-size:3.4rem;line-height:1;margin:6px 0;font-weight:400}
+.prize .tot{font-weight:600}
+.prize .code{font-family:ui-monospace,monospace;font-size:1rem;background:var(--bg);color:#fff;padding:4px 12px;border-radius:8px;margin-top:8px}
+.prize.gold{background:linear-gradient(135deg,#ffffff,#cfe5ff)}
+canvas{position:absolute;inset:0;width:100%;height:100%;cursor:pointer;transition:opacity .6s}
+.pct{text-align:center;color:var(--muted);font-size:.85rem;margin-top:10px}
+.after{display:none;margin-top:18px}
+.wallet{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.next{background:#0e1529;border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:16px;font-size:.92rem}
+.next b{color:var(--blue)}
+.hidden{display:none!important}
+footer{padding:26px 0 40px;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+footer a{color:var(--blue)}
+@media(max-width:480px){.wallet{grid-template-columns:1fr}}
