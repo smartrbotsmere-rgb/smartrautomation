@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/build-club/</loc>
+    <lastmod>2026-11-03T06:30:32.734Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/snackandlearn/</loc>
     <lastmod>2026-10-30T04:33:02.242Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -93,11 +98,6 @@
   <url>
     <loc>https://smartrautomation.ca/snackandlearn-results/</loc>
     <lastmod>2026-10-21T15:24:54.107Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/build-club/</loc>
-    <lastmod>2026-10-19T23:12:39.290Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
