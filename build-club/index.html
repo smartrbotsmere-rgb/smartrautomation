@@ -222,7 +222,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var pBtn=document.getElementById('lp-pay-success-btn');
       if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -299,7 +299,7 @@
       overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
       function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
       var subTxt=successSubtext||'Thank you for your order.';
-      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;background:color-mix(in srgb,'+successBtnColor+' 12%,white);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="'+successBtnColor+'" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
       document.body.appendChild(overlay);
       var cBtn=document.getElementById('lp-cart-success-btn');
       if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
@@ -310,15 +310,15 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav><div class="wrap"><a class="word" href="https://smartrautomation.ca/">The Build Club <em>with Mere</em> <span>Smart 'R' Automation</span></a><div class="navlinks"><a href="#proof">What you get</a><a href="#how">How it works</a><a href="#forwho">Is this you</a><a class="nav-cta" href="#offer">Founding list</a></div></div></nav>
+<nav><div class="wrap"><a class="word" href="https://smartrautomation.ca/">The Build Club <em>with Mere</em> <span>Smart 'R' Automation</span></a><div class="navlinks"><a href="#proof">What you get</a><a href="#how">How it works</a><a href="#forwho">Is this you</a><a class="nav-cta" href="#offer">Join now</a></div></div></nav>
 <section class="hero"><div class="wrap" style="display:contents;">
-<div data-aos="fade-up" data-aos-duration="700"><div class="kicker">Monthly · Live · Done-WITH-you</div>
+<div data-aos="fade-up" data-aos-duration="700"><div class="kicker">Open now · Monthly · Live · Done-WITH-you</div>
 <h1>You didn't spend 20+ years<br>building real skills<br>just to start from<br><span class="hl">scratch on someone else's idea.</span></h1>
-<p class="hero-sub">You know things. Decades of things. What actually works, what customers actually want, what always goes wrong. That's not nothing — that's the raw material for a real online business, and most of it's just sitting there unused. The Build Club with Mere is where you turn what you already know into something small, real, and yours — a couple of hours a month, no code, no jargon, no chasing whatever's trending this week.</p>
-<div class="hero-ctas"><a href="#offer" class="btn-primary">Join the founding list</a><a href="#proof" class="btn-ghost">See a kit in action</a></div>
+<p class="hero-sub">You know things. Decades of things. What actually works, what customers actually want, what always goes wrong. That's not nothing — that's the raw material for a real online business, and most of it's just sitting there unused. The Build Club with Mere is where you turn what you already know into something small, real, and yours — come live when you can, no code, no jargon, no chasing whatever's trending this week.</p>
+<div class="hero-ctas"><a href="#offer" class="btn-primary">Join now</a><a href="#proof" class="btn-ghost">See a kit in action</a></div>
 <p class="hero-note">Not your bro. Not a shortcut to "passive income." Built on land you own, not rented LLM ground.</p>
 <p class="hero-note" style="margin-top:6px;">The promise: you leave every session with something you could actually hand to a business — not a notebook full of "ideas."</p></div>
-<div class="mock" id="hero-mock" data-aos="fade-left" data-aos-delay="150" data-aos-duration="700"><div class="mock-title">A few things we've built together</div><div class="stages">
+<div class="mock" id="hero-mock" data-aos="fade-left" data-aos-delay="150" data-aos-duration="700"><div class="mock-title">A few things I've built</div><div class="stages">
 <div class="build-item"><span class="build-emoji">🧠</span><div><b>Second Brain</b><span>Your own AI that remembers your whole business, so you stop re-explaining it every morning</span></div></div>
 <div class="build-item"><span class="build-emoji">🐕</span><div><b>Dog Sitter Kit</b><span>Booking, vaccination reminders, rebooking nudges — fully automated</span></div></div>
 <div class="build-item"><span class="build-emoji">🔧</span><div><b>Contractor CRM</b><span>Job booked → confirmed → dispatched → invoiced → reviewed, zero manual texting</span></div></div>
@@ -337,7 +337,7 @@
 <div class="pain-item" data-aos="fade-up" data-aos-delay="0">Every "start an online business" pitch is aimed at 25-year-olds with no mortgage and no track record — like starting over is the only way in. It's not. You've already done the hard part: you know your industry, your people, what problems are real and which ones are made up by ad copy.</div>
 <div class="pain-item" data-aos="fade-up" data-aos-delay="60">Everyone's chasing the flashy AI demo stuff for Twitter. You're not — you've spent too long building things that actually work to start faking it now. Businesses don't pay for flashy — they pay for boring, done well: faster replies, no missed calls, invoices that send themselves.</div>
 <div class="pain-item" data-aos="fade-up" data-aos-delay="120">You already know small businesses need this — booking, follow-ups, invoicing — but every tutorial buries the 10 real steps under an hour of jargon.</div>
-<div class="pain-item" data-aos="fade-up" data-aos-delay="180">You're done feeling behind on AI. You don't need a life hack — you need a couple of hours a month where someone builds something real with you, for your actual life, not a hypothetical "AI strategy."</div>
+<div class="pain-item" data-aos="fade-up" data-aos-delay="180">You're done feeling behind on AI. You don't need a life hack — you need someone to build something real with you, for your actual life, not a hypothetical "AI strategy."</div>
 <div class="pain-item" data-aos="fade-up" data-aos-delay="240">Every "community" you've tried either assumes you already speak the jargon, or is a room of people watching one guy build along to his own screen. You leave with notes, not something you could offer anyone.</div>
 </div></div></section>
 <section class="pull"><div class="wrap" style="display:contents;"><blockquote data-aos="zoom-in" data-aos-duration="700">"I saw a guy doing this in New York and thought — my people deserve better than a folder. His members walk out with a Claude project that lives on their computer. Mine walk out with something that's <span>actually ON THE INTERNET doing a job</span> — taking payments, booking appointments, sending texts."<cite>— the difference, in one line</cite></blockquote></div></section>
@@ -372,22 +372,18 @@
 <li><b>A couple of live Q&As every month</b> — bring what's stuck, get it unstuck.</li>
 <li><b>Every build comes with a ready-made template</b> — you're customizing a working start, not building from a blank screen or learning everything from zero.</li>
 <li><b>Questions answered anytime</b> — a real person, not a bot, not a forum where you wait.</li>
-<li><b>Your own Smart 'R' Automation account, included</b> — a $97 value on its own. You're not paying extra for the AI. This price covers all of it: the platform, the community, and me.</li>
+<li><b>Your own Smart 'R' Automation account, included</b> — a $79 value on its own. You're not paying extra for the AI. This price covers all of it: the platform, the community, and me.</li>
 <li><b>You get more than you paid for</b> — surprise builds whenever there's extra time.</li>
 <li><b>You're never behind</b> — miss a session? It lives in the membership site, ready whenever you are.</li>
 </ul></div>
-<div class="offer-right"><p class="price">$97<span>/month</span></p><p class="price-note">Founding members · 10 seats · opens November 1</p>
+<div class="offer-right"><p class="price">$97<span>/month</span></p><p class="price-note">Founding members · first 10 seats · open now</p>
 <ul class="founding-list">
 <li><b>$97/month, locked in</b> for as long as you stay a member</li>
-<li><b>A 30-minute "build it with me" call</b> to set up your first kit together</li>
+<li><b>A 1-on-1 onboarding call</b> with me to set up your first build</li>
+<li><b>One "fix my build" review</b> with me, to use in Q1 2027</li>
 </ul>
-<form class="ff" id="foundingForm">
-<input name="name" type="text" required placeholder="Your first name" autocomplete="given-name">
-<input name="email" type="email" required placeholder="you@example.com" autocomplete="email">
-<button type="submit" class="btn-block" id="ffBtn">Put me on the founding list</button>
-</form>
-<div id="ffStatus"></div>
-<p class="checkout-note">No payment today. Why only 10? I do every setup call myself. I'll email you before doors open on November 1. Cancel anytime once you join.</p></div>
+<a href="https://tools.smartrautomation.ca/subscriber/auth?ownerId=785&planId=151" class="btn-block" style="text-align:center;">Join as a founding member — $97/mo</a>
+<p class="checkout-note">Includes your own Smart 'R' Automation account. Why only 10? I do every onboarding call myself. Cancel anytime, no contracts.<br><br>Already have your own PayMeGPT or SuperStack OS account? It's $79/month — message me for your private link.</p></div>
 <div class="offer-bottom">
 <div class="offer-bottom-label">Your account also includes</div>
 <div class="account-grid">
@@ -448,28 +444,7 @@ if (window.gsap && window.ScrollTrigger) {
   });
 }
 
-// Founding list form -> flow 7216 (tags build-club-founding-list, emails Mere)
-(function(){
-  var f=document.getElementById('foundingForm'), b=document.getElementById('ffBtn'), s=document.getElementById('ffStatus');
-  if(!f) return;
-  f.addEventListener('submit',function(e){
-    e.preventDefault(); if(b.disabled) return;
-    b.disabled=true; var t=b.textContent; b.textContent='Adding you...'; s.style.display='none';
-    var fd=new FormData(f);
-    fetch('https://paymegpt.com/api/webhooks/flow/7216/7f0ff1e51670d05451681ed2a697da6729ba65ec07f38e633f4b8b89bb962020',{
-      method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({contactEmail:fd.get('email'),contactName:fd.get('name'),data:{source:'build-club-sales-page'}})
-    }).then(function(r){
-      if(!r.ok) throw new Error();
-      f.style.display='none';
-      s.textContent='You\'re on the founding list. I\'ll email you before doors open on November 1.';
-      s.style.display='block';
-    }).catch(function(){
-      b.disabled=false; b.textContent=t;
-      s.textContent='Sorry, that didn\'t go through. Please try again.'; s.style.display='block';
-    });
-  });
-})();
+
 </script>
 </body>
 </html>
