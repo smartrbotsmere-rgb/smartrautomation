@@ -471,9 +471,10 @@
 
 <script>
 (function(){
-  var me=null;
+  var me=null, DAY=86400000;
   try{me=JSON.parse(localStorage.getItem('snackbar_member')||'null');}catch(e){me=null;}
-  if(!me||!me.email){ document.getElementById('notMember').classList.remove('hidden'); return; }
+  // The home page re-checks approval; its "approved" note is only trusted for 24 hours.
+  if(!me||!me.email||!me.at||(Date.now()-me.at)>DAY){ document.getElementById('notMember').classList.remove('hidden'); return; }
 
   document.getElementById('wallArea').classList.remove('hidden');
   document.getElementById('newBtn').classList.remove('hidden');
