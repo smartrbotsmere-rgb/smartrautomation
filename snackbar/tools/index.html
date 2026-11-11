@@ -439,9 +439,10 @@
 
 <script>
 (function(){
-  var me=null;
+  var me=null, DAY=86400000;
   try{me=JSON.parse(localStorage.getItem('snackbar_member')||'null');}catch(e){me=null;}
-  if(!me||!me.email){ document.getElementById('notMember').classList.remove('hidden'); return; }
+  // The home page re-checks approval; its "approved" note is only trusted for 24 hours.
+  if(!me||!me.email||!me.at||(Date.now()-me.at)>DAY){ document.getElementById('notMember').classList.remove('hidden'); return; }
   var list=document.getElementById('list'); list.classList.remove('hidden');
   function rowsOf(j){return Array.isArray(j)?j:(j&&(j.rows||j.data))||[];}
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
