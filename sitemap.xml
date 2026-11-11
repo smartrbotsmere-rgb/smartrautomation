@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/snackbar/home/</loc>
+    <lastmod>2026-11-11T03:19:01.273Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/snackbar/</loc>
     <lastmod>2026-11-11T03:18:50.881Z</lastmod>
     <changefreq>weekly</changefreq>
