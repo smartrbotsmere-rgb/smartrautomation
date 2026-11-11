@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://smartrautomation.ca/snackbar/tools/</loc>
+    <lastmod>2026-11-11T04:23:34.780Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://smartrautomation.ca/snackbar/wall/</loc>
     <lastmod>2026-11-11T04:23:27.989Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -8,11 +13,6 @@
   <url>
     <loc>https://smartrautomation.ca/snackbar/home/</loc>
     <lastmod>2026-11-11T04:23:20.915Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://smartrautomation.ca/snackbar/tools/</loc>
-    <lastmod>2026-11-11T04:22:28.270Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
