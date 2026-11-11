@@ -436,6 +436,11 @@
     <a class="btn" href="https://smartrautomation.ca/snackbar/#apply">Apply to join</a>
   </div>
 
+  <div id="removed" class="state hidden">
+    <h2>You don't have access to The Snack Bar right now</h2>
+    <p>If you think that's a mistake, email Mere at smartrbotsmere@gmail.com.</p>
+  </div>
+
   <div id="error" class="state hidden">
     <h2>Couldn't load your seat</h2>
     <p>Refresh the page in a minute. If it keeps happening, email Mere at smartrbotsmere@gmail.com.</p>
@@ -480,7 +485,7 @@
 <script>
 (function(){
   var KEY='snackbar_member';
-  function show(id){['loading','waiting','error','member'].forEach(function(x){document.getElementById(x).classList.toggle('hidden',x!==id);});}
+  function show(id){['loading','waiting','removed','error','member'].forEach(function(x){document.getElementById(x).classList.toggle('hidden',x!==id);});}
   function setFlag(v){try{if(v)localStorage.setItem(KEY,JSON.stringify(v));else localStorage.removeItem(KEY);}catch(e){}}
   function rowsOf(j){return Array.isArray(j)?j:(j&&(j.rows||j.data))||[];}
   function val(row,name){for(var k in row){if(String(k).toLowerCase()===name.toLowerCase())return row[k];}return '';}
@@ -489,21 +494,26 @@
     var url=(document.querySelector('meta[name="sheet-data-url"]')||{}).content;
     if(!url){ if(++tries<15){setTimeout(load,1000);return;} show('error'); return; }
     fetch(url,{credentials:'include'}).then(function(r){
-      if(r.status===401||r.status===403){ throw {retry:true}; }
-      if(!r.ok) throw {retry:false};
+      if(!r.ok) throw new Error('HTTP '+r.status);
       return r.json();
     }).then(function(j){
-      var rows=rowsOf(j).filter(function(r){
-        var s=String(val(r,'Status')||'').trim().toLowerCase();
-        return val(r,'Email') && s!=='removed' && s!=='hidden';
-      });
+      // Every line for this verified email (the server only returns their own rows).
+      // The newest line wins: Approved = in, Removed = out.
+      var rows=rowsOf(j).map(function(r,i){return {r:r,i:i};}).filter(function(x){return val(x.r,'Email');});
       if(!rows.length){ setFlag(null); show('waiting'); return; }
-      var name=String(val(rows[0],'Name')||'').trim();
+      rows.sort(function(a,b){
+        var da=Date.parse(val(a.r,'Approved Date'))||0, db=Date.parse(val(b.r,'Approved Date'))||0;
+        return da!==db ? da-db : a.i-b.i;
+      });
+      var latest=rows[rows.length-1].r;
+      var status=String(val(latest,'Status')||'').trim().toLowerCase();
+      if(status!=='approved'){ setFlag(null); show('removed'); return; }
+      var name=String(val(latest,'Name')||'').trim();
       var first=name.split(' ')[0]||'';
       if(first) document.getElementById('hello').textContent='Welcome back, '+first+'.';
-      setFlag({name:name,email:String(val(rows[0],'Email')).trim(),at:Date.now()});
+      setFlag({name:name,email:String(val(latest,'Email')).trim(),at:Date.now()});
       show('member');
-    }).catch(function(e){
+    }).catch(function(){
       if(++tries<15){ setTimeout(load,2000); return; }
       show('error');
     });
