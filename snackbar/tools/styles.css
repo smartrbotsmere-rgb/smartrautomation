@@ -1,0 +1,29 @@
+:root{--navy:#042069;--navy-2:#0B2E86;--ink:#141824;--muted:#5B6275;--paper:#F7F4EE;--card:#FFFFFF;--line:#E4DFD4;--tint:#E8ECF7;--accent:#BFD0FF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Instrument Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+a{color:inherit}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+nav{padding:18px 0}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:20px;text-decoration:none;color:var(--navy)}
+.links{display:flex;gap:6px;flex-wrap:wrap}
+.links a{text-decoration:none;font-weight:600;font-size:15px;padding:8px 14px;border-radius:999px;color:var(--navy)}
+.links a.on,.links a:hover{background:var(--navy);color:#fff}
+.hero{background:var(--navy);color:#fff;border-radius:24px;margin:0 12px;padding:40px 0 44px}
+.hero h1{font-size:clamp(34px,6vw,54px);margin-bottom:8px}
+.hero p{font-size:17px;opacity:.92;max-width:600px}
+main{padding:32px 0 20px}
+.grid{display:grid;gap:16px}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}
+.item{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.item .type{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);background:var(--tint);padding:3px 10px;border-radius:999px}
+.item h3{font-size:21px;color:var(--ink)}
+.item p{color:var(--muted)}
+.item a.go{margin-top:auto;font-weight:700;color:var(--navy);text-decoration:none}
+.state{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px;text-align:center;color:var(--muted)}
+.state h2{font-size:26px;color:var(--navy);margin-bottom:8px}
+.btn{display:inline-block;background:var(--navy);color:#fff;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:999px;font-size:15px;margin-top:14px}
+.hidden{display:none}
+footer{padding:30px 0 44px;color:var(--muted);font-size:14px}
+footer .wrap{border-top:1px solid var(--line);padding-top:20px}
